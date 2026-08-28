@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Andrea Alfonzo — Aerialist and dancer | Hair hanging, aerial lyra and silks",
+    "description": "Andrea Alfonzo is an aerialist and dancer based in Buenos Aires, specialising in hair hanging, aerial lyra and silks, available for international work.",
+    "keywords": "aerialist, hair hanging, aerial lyra, aerial silks, aerial drop straps, circus artist Argentina, aerialist for hire"
+  },
+  "common": {
+    "skip": "Skip to content",
+    "scroll": "Scroll to discover",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "language": "Language"
+  },
+  "nav": {
+    "about": "About",
+    "disciplines": "Disciplines",
+    "experience": "Experience",
+    "training": "Training",
+    "gallery": "Gallery",
+    "specs": "Stats",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Andrea Belén Alfonzo",
+    "tagline": "Aerialist and dancer",
+    "location": "Buenos Aires, Argentina · Available to travel",
+    "ctaPrimary": "Book me",
+    "ctaSecondary": "See my work",
+    "media": "hero.jpg / hero.mp4"
+  },
+  "about": {
+    "eyebrow": "Movement · strength · expression",
+    "title": "About",
+    "portrait": "portrait.jpg",
+    "portraitAlt": "Professional portrait of Andrea Alfonzo",
+    "paragraphs": [
+      "I am a professional circus artist, aerialist and dancer, passionate about movement, performance and artistic expression. My work combines discipline, strength, elegance and sensitivity, creating performances that connect with the audience through emotion and stage presence.",
+      "I consider myself a committed, adaptable and dedicated artist, with a constant desire to keep learning and to take on new challenges. My training in dance and circus has allowed me to develop versatility, stage presence and a deep connection with movement, music and performance.",
+      "Through my performances I seek to move, inspire and captivate the audience, creating memorable experiences and bringing my own personality, energy and passion to every stage.",
+      "My goal is to keep growing professionally and to be part of companies, shows, productions and artistic projects both in Argentina and abroad, contributing professionalism, creativity and commitment in every opportunity."
+    ]
+  },
+  "disciplines": {
+    "eyebrow": "Specialities",
+    "title": "Aerial disciplines",
+    "hairHanging": {
+      "name": "Hair hanging",
+      "description": "An aerial act held entirely by the hair, where strength turns into stillness."
+    },
+    "aerialLyra": {
+      "name": "Aerial lyra",
+      "description": "Shapes and transitions on the hoop, between dance and acrobatics."
+    },
+    "aerialDrop": {
+      "name": "Aerial drop straps",
+      "description": "High-impact drops and spins that play with speed and vertigo."
+    },
+    "aerialSilks": {
+      "name": "Aerial silks",
+      "description": "Climbs, wraps and drops that draw the air with the fabric."
+    },
+    "other": "Versatility and adaptation to different aerial techniques and apparatus according to the needs of each show. Complementary training in classical ballet, jazz, contemporary, urban styles, contortion, acrobatics and pole sport."
+  },
+  "experience": {
+    "eyebrow": "Career",
+    "title": "Experience",
+    "international": "International experience",
+    "morsicomics": {
+      "company": "Circo Morsicomics",
+      "place": "Argentina",
+      "period": "July – August 2026 · Winter season",
+      "role": "Circus artist / Aerialist – Soloist",
+      "summary": "Performed as an aerial artist during the circus's winter season.",
+      "bullets": ["Performed hair hanging and aerial lyra acts.", "Presented aerial acts in live shows.", "Worked as a solo artist, independently preparing and performing each act."]
+    },
+    "cirque": {
+      "company": "Cirque XXI 360",
+      "place": "San Carlos de Bariloche, Río Negro, Argentina",
+      "period": "September 2025 – March 2026",
+      "role": "Dancer / Aerialist",
+      "summary": "Season-long engagement as part of the circus cast, performing as a dancer and aerialist.",
+      "bullets": ["Performed aerial lyra and hair hanging acts.", "Performed as a dancer in the circus's different productions and shows.", "Part of a multidisciplinary cast, working alongside acrobats and artists from other disciplines.", "Active involvement in the staged productions and live performances throughout the whole season."]
+    },
+    "arlequin": {
+      "company": "Circo Arlequín",
+      "place": "Argentina",
+      "period": "June – August 2025 · Winter season",
+      "role": "Circus artist / Aerialist – Soloist",
+      "summary": "Performed as a solo artist during the circus's winter season.",
+      "bullets": ["Performed a solo hair hanging act.", "Performed 3 shows daily.", "Independently prepared and performed the act, with responsibility for its artistic presentation."]
+    },
+    "inovacirco": {
+      "company": "INOVACIRCO",
+      "place": "Buenos Aires, Argentina",
+      "period": "5 April 2025",
+      "role": "Circus artist / Aerialist",
+      "summary": "Featured in a 50-minute professional show as part of a cast of acrobats and dancers.",
+      "bullets": ["Performed a hair hanging act.", "Took part in a multidisciplinary show alongside artists from different disciplines.", "Teamwork and stage coordination with the cast."]
+    },
+    "talkkin": {
+      "company": "Talkkin Silja Symphony — Cruise ship",
+      "place": "Finland and Sweden",
+      "period": "December 2024 – March 2025",
+      "role": "Aerialist",
+      "summary": "Performed in professional shows on board the cruise ship, as part of a multidisciplinary cast of acrobats and dancers.",
+      "bullets": ["Two 45-minute shows a day.", "Performed in different aerial acts, alternating disciplines according to each show's programme.", "Aerial silks, hair hanging, drop straps and aerial lyra.", "Ensemble work and coordination with artists from different disciplines.", "Professional experience in an international live entertainment environment."]
+    },
+    "turnoc": {
+      "company": "Compañía Turnoc — Buenos Aires",
+      "place": "Buenos Aires, Argentina",
+      "period": "2021 – 2023",
+      "role": "Circus artist / Aerialist / Dancer",
+      "summary": "Performed in different stage productions with the company as part of multidisciplinary casts, developing a range of circus, dance and performance pieces.",
+      "productions": {
+        "hastaLaRaiz": {"title": "Hasta la Raíz", "bullets": ["Performed an aerial silks act.", "Performed alongside other artists and a live singer."]},
+        "cabaret": {"title": "Cabaret", "bullets": ["Performed an aerial hoop / lyra act.", "Took part in a cabaret-style dinner show alongside live musicians and singers.", "Developed a sensual, expressive and performance-driven stage piece."]},
+        "trabajadoresLunares": {"title": "Trabajadores Lunares", "bullets": ["Performed as part of a multidisciplinary cast.", "Performed chair acrodance.", "Ensemble work with women and men artists across different disciplines and stage roles.", "Show accompanied by a live DJ."]}
+      }
+    },
+    "eden": {
+      "company": "Edén — Lo salvaje de la naturaleza",
+      "place": "Teatro Metropolitan, Buenos Aires, Argentina",
+      "period": "2021",
+      "role": "Dancer / Performer",
+      "summary": "Performed as a dancer in Edén, lo salvaje de la naturaleza, taking part in different scenes and choreographic pieces throughout the show.",
+      "bullets": ["Performed the stage role of a snake.", "Took part in different scenes throughout the show.", "Worked as a performer in a professional stage production."]
+    }
+  },
+  "training": {
+    "eyebrow": "Preparation",
+    "title": "Training and workshops",
+    "educationTitle": "Training",
+    "workshopsTitle": "Workshops",
+    "education": ["Circus Arts and Dance degree programme", "Flexibility and contortion training", "Classical Ballet teaching certification", "Jazz Dance teaching certification", "Flexibility instructor certification", "Personal Trainer course", "CPR certification"],
+    "workshops": ["Theatre Jazz", "Contemporary", "Jazz Dance", "Urban Dance", "Acrobatics", "Classical Ballet", "Flexibility", "Clown", "Theatre and Dance"]
+  },
+  "gallery": {
+    "eyebrow": "On stage",
+    "title": "Gallery",
+    "lead": "A visual selection of disciplines, movement and stage presence.",
+    "reel": "Featured reel",
+    "reelMedia": "reel.mp4 / reel-poster.jpg",
+    "open": "Enlarge image",
+    "close": "Close image",
+    "items": {
+      "01": "galeria-01.jpg",
+      "02": "galeria-02.jpg",
+      "03": "galeria-03.jpg",
+      "04": "galeria-04.jpg",
+      "05": "galeria-05.jpg",
+      "06": "galeria-06.jpg",
+      "07": "galeria-07.jpg",
+      "08": "galeria-08.jpg",
+      "09": "galeria-09.jpg"
+    }
+  },
+  "specs": {
+    "eyebrow": "Casting details",
+    "title": "Technical profile",
+    "items": [
+      {"label": "Height", "value": "1.56 m"},
+      {"label": "Hair", "value": "Long, waist-length"},
+      {"label": "Hair colour", "value": "Dark brown"},
+      {"label": "Eye colour", "value": "Brown"},
+      {"label": "Complexion", "value": "Light olive"},
+      {"label": "Build", "value": "Slim and athletic"},
+      {"label": "Shoe size", "value": "36 (EU)"},
+      {"label": "Costume size", "value": "S"},
+      {"label": "Tattoos", "value": "None"},
+      {"label": "Piercings", "value": "None"},
+      {"label": "Languages", "value": "Spanish native · English basic (learning)"},
+      {"label": "Passport", "value": "Valid"},
+      {"label": "Availability", "value": "Available to travel and work internationally"}
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's work together",
+    "lead": "Available for shows, productions and international tours.",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "instagram": "Instagram",
+    "whatsappMessage": "Hi Andrea! I'm getting in touch about a work opportunity."
+  },
+  "footer": {
+    "rights": "Andrea Belén Alfonzo · All rights reserved",
+    "backToTop": "Back to top"
+  }
+}

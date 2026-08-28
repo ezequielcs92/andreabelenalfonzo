@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Andrea Alfonzo — Aerialista y bailarina | Suspensión capilar, lira y tela aérea",
+    "description": "Andrea Alfonzo, aerialista y bailarina en Buenos Aires. Especialista en suspensión capilar, lira y tela aérea, disponible para proyectos internacionales.",
+    "keywords": "aerialista, suspensión capilar, lira aérea, tela aérea, cintas gota, artista circense Buenos Aires, bailarina y acróbata aérea"
+  },
+  "common": {
+    "skip": "Saltar al contenido",
+    "scroll": "Deslizar para descubrir",
+    "menuOpen": "Abrir menú",
+    "menuClose": "Cerrar menú",
+    "language": "Idioma"
+  },
+  "nav": {
+    "about": "Sobre mí",
+    "disciplines": "Disciplinas",
+    "experience": "Experiencia",
+    "training": "Formación",
+    "gallery": "Galería",
+    "specs": "Ficha técnica",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "name": "Andrea Belén Alfonzo",
+    "tagline": "Aerialista y bailarina",
+    "location": "Buenos Aires, Argentina · Disponible para viajar",
+    "ctaPrimary": "Contratar",
+    "ctaSecondary": "Ver trabajo",
+    "media": "hero.jpg / hero.mp4"
+  },
+  "about": {
+    "eyebrow": "Movimiento · fuerza · expresión",
+    "title": "Sobre mí",
+    "portrait": "portrait.jpg",
+    "portraitAlt": "Retrato profesional de Andrea Alfonzo",
+    "paragraphs": [
+      "Soy artista circense profesional, aerialista y bailarina, apasionada por el movimiento, la interpretación y la expresión artística. Mi trabajo combina disciplina, fuerza, elegancia y sensibilidad, buscando crear presentaciones que conecten con el público a través de la emoción y la expresión escénica.",
+      "Me considero una artista comprometida, adaptable y dedicada, con un constante deseo de seguir aprendiendo y afrontar nuevos desafíos. Mi formación en danza y circo me ha permitido desarrollar versatilidad, presencia escénica y una profunda conexión con el movimiento, la música y la interpretación.",
+      "A través de mis presentaciones busco emocionar, inspirar y cautivar al público, creando experiencias memorables y transmitiendo mi propia personalidad, energía y pasión en cada escenario.",
+      "Mi objetivo es continuar creciendo profesionalmente y formar parte de compañías, espectáculos, producciones y proyectos artísticos nacionales e internacionales, aportando profesionalismo, creatividad y compromiso en cada oportunidad."
+    ]
+  },
+  "disciplines": {
+    "eyebrow": "Especialidades",
+    "title": "Disciplinas aéreas",
+    "hairHanging": {
+      "name": "Suspensión capilar",
+      "description": "Número de altura sostenido desde el cabello, donde la fuerza se vuelve calma."
+    },
+    "aerialLyra": {
+      "name": "Lira aérea",
+      "description": "Figuras y transiciones sobre el aro, entre la danza y la acrobacia."
+    },
+    "aerialDrop": {
+      "name": "Cintas gota",
+      "description": "Caídas y giros de alto impacto que juegan con la velocidad y el vértigo."
+    },
+    "aerialSilks": {
+      "name": "Tela aérea",
+      "description": "Trepadas, envolturas y caídas que dibujan el aire con la tela."
+    },
+    "other": "Versatilidad y adaptación a diferentes técnicas y elementos aéreos según las necesidades del espectáculo. Formación complementaria en danza clásica, jazz, contemporáneo, ritmos urbanos, contorsión, acrobacia y pole sport."
+  },
+  "experience": {
+    "eyebrow": "Trayectoria",
+    "title": "Experiencia",
+    "international": "Experiencia internacional",
+    "morsicomics": {
+      "company": "Circo Morsicomics",
+      "place": "Argentina",
+      "period": "Julio – Agosto 2026 · Temporada de invierno",
+      "role": "Artista circense / Aerialista – Solista",
+      "summary": "Participación como artista aérea durante la temporada de invierno del circo.",
+      "bullets": ["Ejecución de números de suspensión capilar y lira aérea.", "Presentación de actos aéreos en espectáculos en vivo.", "Trabajo como artista solista, con preparación y ejecución individual de los números."]
+    },
+    "cirque": {
+      "company": "Cirque XXI 360",
+      "place": "San Carlos de Bariloche, Río Negro, Argentina",
+      "period": "Septiembre 2025 – Marzo 2026",
+      "role": "Bailarina / Aerialista",
+      "summary": "Participación en temporada artística formando parte del elenco del circo como bailarina y aerialista.",
+      "bullets": ["Ejecución de números de lira aérea y suspensión capilar.", "Participación como bailarina en las diferentes producciones y espectáculos del circo.", "Integración de un elenco multidisciplinario, trabajando en conjunto con acróbatas y artistas de diferentes disciplinas.", "Participación activa en las producciones escénicas y presentaciones en vivo durante toda la temporada."]
+    },
+    "arlequin": {
+      "company": "Circo Arlequín",
+      "place": "Argentina",
+      "period": "Junio – Agosto 2025 · Temporada de invierno",
+      "role": "Artista circense / Aerialista – Solista",
+      "summary": "Participación como artista solista durante la temporada de invierno del circo.",
+      "bullets": ["Presentación de un número solista de suspensión capilar.", "Realización de 3 funciones diarias.", "Preparación y ejecución individual del acto, con responsabilidad sobre la presentación artística."]
+    },
+    "inovacirco": {
+      "company": "INOVACIRCO",
+      "place": "Buenos Aires, Argentina",
+      "period": "5 de abril de 2025",
+      "role": "Artista circense / Aerialista",
+      "summary": "Participación en un espectáculo profesional de 50 minutos, formando parte de un elenco integrado por acróbatas y bailarinas.",
+      "bullets": ["Realización de un número de suspensión capilar.", "Participación en un espectáculo multidisciplinario junto a artistas de diferentes disciplinas.", "Trabajo en equipo y coordinación escénica con el elenco."]
+    },
+    "talkkin": {
+      "company": "Talkkin Silja Symphony — Crucero",
+      "place": "Finlandia y Suecia",
+      "period": "Diciembre 2024 – Marzo 2025",
+      "role": "Aerialista",
+      "summary": "Participación en espectáculos profesionales a bordo del crucero, formando parte de un elenco multidisciplinario integrado por acróbatas y bailarines.",
+      "bullets": ["Realización de 2 shows diarios de 45 minutos.", "Participación en diferentes números aéreos, alternando disciplinas según la programación de cada espectáculo.", "Interpretación de tela aérea, suspensión capilar, cinta gota y lira aérea.", "Trabajo grupal y coordinación con artistas de diferentes disciplinas.", "Experiencia profesional en un entorno internacional de entretenimiento y espectáculos en vivo."]
+    },
+    "turnoc": {
+      "company": "Compañía Turnoc — Buenos Aires",
+      "place": "Buenos Aires, Argentina",
+      "period": "2021 – 2023",
+      "role": "Artista circense / Aerialista / Bailarina",
+      "summary": "Participación en diferentes producciones escénicas de la compañía, formando parte de elencos multidisciplinarios y desarrollando diferentes propuestas de circo, danza y performance.",
+      "productions": {
+        "hastaLaRaiz": {"title": "Hasta la Raíz", "bullets": ["Ejecución de un número de tela aérea.", "Participación junto a otras artistas y cantante en vivo."]},
+        "cabaret": {"title": "Cabaret", "bullets": ["Ejecución de un número de aro / lira aérea.", "Participación en un espectáculo de estilo cabaret y cena-show, junto a músicos y cantantes en vivo.", "Desarrollo de una propuesta escénica de carácter sensual, expresivo y performático."]},
+        "trabajadoresLunares": {"title": "Trabajadores Lunares", "bullets": ["Participación como intérprete en un elenco multidisciplinario.", "Ejecución de acrodance en silla.", "Trabajo grupal junto a artistas mujeres y hombres, con diferentes disciplinas y roles escénicos.", "Espectáculo acompañado por DJ en vivo."]}
+      }
+    },
+    "eden": {
+      "company": "Edén — Lo salvaje de la naturaleza",
+      "place": "Teatro Metropolitan, Buenos Aires, Argentina",
+      "period": "2021",
+      "role": "Bailarina / Intérprete",
+      "summary": "Participación como bailarina en el espectáculo “Edén, lo salvaje de la naturaleza”, formando parte de diferentes cuadros y propuestas coreográficas del show.",
+      "bullets": ["Interpretación escénica del personaje de una serpiente.", "Participación en diferentes cuadros del espectáculo.", "Trabajo como intérprete dentro de una producción escénica profesional."]
+    }
+  },
+  "training": {
+    "eyebrow": "Preparación",
+    "title": "Formación y workshops",
+    "educationTitle": "Formación",
+    "workshopsTitle": "Workshops",
+    "education": ["Formación en Carrera de Artes Circenses y Danza", "Formación en Flexibilidad y Contorsión", "Profesorado de Danza Clásica", "Profesorado de Danza Jazz", "Instructorado de Flexibilidad", "Curso de Personal Trainer", "Curso de RCP"],
+    "workshops": ["Theater Jazz", "Contemporáneo", "Danza Jazz", "Ritmos urbanos", "Acrobacia", "Danza clásica", "Flexibilidad", "Clown", "Teatro y Danza"]
+  },
+  "gallery": {
+    "eyebrow": "En escena",
+    "title": "Galería",
+    "lead": "Una selección visual de disciplinas, movimiento y presencia escénica.",
+    "reel": "Reel destacado",
+    "reelMedia": "reel.mp4 / reel-poster.jpg",
+    "open": "Ampliar imagen",
+    "close": "Cerrar imagen",
+    "items": {
+      "01": "galeria-01.jpg",
+      "02": "galeria-02.jpg",
+      "03": "galeria-03.jpg",
+      "04": "galeria-04.jpg",
+      "05": "galeria-05.jpg",
+      "06": "galeria-06.jpg",
+      "07": "galeria-07.jpg",
+      "08": "galeria-08.jpg",
+      "09": "galeria-09.jpg"
+    }
+  },
+  "specs": {
+    "eyebrow": "Datos de casting",
+    "title": "Ficha técnica",
+    "items": [
+      {"label": "Altura", "value": "1,56 m"},
+      {"label": "Cabello", "value": "Largo, hasta la cintura"},
+      {"label": "Color de cabello", "value": "Moreno"},
+      {"label": "Color de ojos", "value": "Marrones"},
+      {"label": "Tez", "value": "Morena clara"},
+      {"label": "Complexión", "value": "Delgada y atlética"},
+      {"label": "Calzado", "value": "36 (AR)"},
+      {"label": "Talle de vestuario", "value": "S"},
+      {"label": "Tatuajes", "value": "No"},
+      {"label": "Piercings", "value": "No"},
+      {"label": "Idiomas", "value": "Español nativo · Inglés básico (en formación)"},
+      {"label": "Pasaporte", "value": "Vigente"},
+      {"label": "Disponibilidad", "value": "Viajes y trabajos internacionales"}
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Trabajemos juntos",
+    "lead": "Disponible para espectáculos, producciones y giras internacionales.",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "instagram": "Instagram",
+    "whatsappMessage": "¡Hola Andrea! Te escribo por una propuesta de trabajo."
+  },
+  "footer": {
+    "rights": "Andrea Belén Alfonzo · Todos los derechos reservados",
+    "backToTop": "Volver arriba"
+  }
+}
