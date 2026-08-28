@@ -5,6 +5,7 @@ import { AnimatePresence, motion, useMotionValueEvent, useReducedMotion, useScro
 import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { Link, usePathname } from "@/i18n/routing";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = ["about", "disciplines", "experience", "training", "gallery", "specs", "contact"] as const;
 
@@ -50,10 +51,11 @@ export function Header() {
           <a key={item} href={`#${item}`}>{t(`nav.${item}`)}</a>
         ))}
       </nav>
-      <div className="header-actions" aria-label={t("common.language")}>
+      <div className="header-actions">
         <Link href={`${pathname}${hash}`} locale="es" className={locale === "es" ? "active" : ""}>ES</Link>
         <span aria-hidden="true">/</span>
         <Link href={`${pathname}${hash}`} locale="en" className={locale === "en" ? "active" : ""}>EN</Link>
+        <ThemeToggle label={t("common.themeToggle")} />
         <button
           className="menu-toggle"
           type="button"

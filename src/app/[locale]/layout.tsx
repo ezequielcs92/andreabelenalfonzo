@@ -14,6 +14,15 @@ import "../globals.css";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "600", "800"], display: "swap", variable: "--font-poppins" });
 
+const themeScript = `
+  try {
+    const saved = localStorage.getItem("theme");
+    const dark = saved ? saved === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.classList.toggle("dark", dark);
+    document.documentElement.style.colorScheme = dark ? "dark" : "light";
+  } catch {}
+`;
+
 export function generateStaticParams() { return routing.locales.map((locale) => ({ locale })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -36,5 +45,5 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   const messages = await getMessages();
   const t = await getTranslations({ locale, namespace: "meta" });
   const jsonLd = getJsonLd(locale as AppLocale, t("description"));
-  return <html lang={locale} className={poppins.variable}><body><NextIntlClientProvider messages={messages}><a className="skip-link" href="#main">{messages.common && (messages.common as Record<string, string>).skip}</a><SmoothScroll><ReadingProgress /><Header /><main id="main">{children}</main><Footer /></SmoothScroll></NextIntlClientProvider><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} /></body></html>;
+  return <html lang={locale} className={poppins.variable} suppressHydrationWarning><head><script dangerouslySetInnerHTML={{ __html: themeScript }} /></head><body><NextIntlClientProvider messages={messages}><a className="skip-link" href="#main">{messages.common && (messages.common as Record<string, string>).skip}</a><SmoothScroll><ReadingProgress /><Header /><main id="main">{children}</main><Footer /></SmoothScroll></NextIntlClientProvider><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} /></body></html>;
 }

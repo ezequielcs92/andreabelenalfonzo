@@ -35,6 +35,11 @@ button { color: inherit; font: inherit; }
 .desktop-nav a:hover { color: var(--color-magenta); }
 .header-actions { display: flex; align-items: center; gap: .4rem; font-size: .72rem; font-weight: 600; }
 .header-actions .active { color: var(--color-magenta); }
+.theme-toggle { display: grid; width: 34px; height: 34px; margin-left: .35rem; padding: 0; place-items: center; border: 1px solid color-mix(in srgb, var(--color-dorado) 55%, transparent); border-radius: 50%; background: transparent; cursor: pointer; }
+.theme-toggle svg { grid-area: 1 / 1; width: 16px; transition: opacity .2s ease, transform .25s ease; }
+.theme-icon-sun { opacity: 0; transform: rotate(-45deg) scale(.65); }
+.dark .theme-icon-moon { opacity: 0; transform: rotate(45deg) scale(.65); }
+.dark .theme-icon-sun { opacity: 1; transform: rotate(0) scale(1); }
 .menu-toggle { display: none; border: 0; background: transparent; }
 .mobile-menu { position: fixed; z-index: -1; inset: -1rem; min-height: 100vh; padding: 8rem 2rem 3rem; background: var(--color-magenta-oscuro); color: var(--color-blanco); }
 .mobile-menu nav { display: flex; flex-direction: column; }
@@ -147,6 +152,50 @@ button { color: inherit; font: inherit; }
 .site-footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.5rem clamp(1.25rem, 4vw, 4rem); background: var(--color-tinta); color: var(--color-blanco); font-size: .7rem; }
 .site-footer a { display: flex; align-items: center; gap: .4rem; color: var(--color-dorado-claro); }
 .site-footer svg { width: 14px; }
+
+.dark body { background: color-mix(in srgb, var(--color-tinta) 94%, var(--color-magenta-oscuro)); color: var(--color-rosa-suave); }
+.dark .skip-link { background: var(--color-tinta); color: var(--color-rosa-suave); }
+.dark .site-header { background: color-mix(in srgb, var(--color-tinta) 92%, transparent); color: var(--color-rosa-suave); box-shadow: 0 12px 40px color-mix(in srgb, var(--color-tinta) 70%, transparent); }
+.dark .header-mark { color: var(--color-blanco); }
+.dark .desktop-nav a:hover, .dark .header-actions .active { color: var(--color-rosa); }
+.dark .about-section,
+.dark .experience-section,
+.dark .gallery-section { background: color-mix(in srgb, var(--color-tinta) 94%, var(--color-magenta-oscuro)); color: var(--color-rosa-suave); }
+.dark .disciplines-section,
+.dark .training-section,
+.dark .specs-section { background: color-mix(in srgb, var(--color-tinta) 78%, var(--color-magenta-oscuro)); color: var(--color-rosa-suave); }
+.dark .section-heading p,
+.dark .section-heading h2 { color: var(--color-rosa); }
+.dark .section-heading-invert p,
+.dark .section-heading-invert h2 { color: var(--color-blanco); }
+.dark .media-placeholder { background: linear-gradient(145deg, color-mix(in srgb, var(--color-magenta-oscuro) 70%, var(--color-tinta)), var(--color-tinta)); color: var(--color-rosa); }
+.dark .about-text > div:first-child p::first-letter { color: var(--color-rosa); }
+.dark .timeline-dot { border-color: var(--color-tinta); background: var(--color-rosa); }
+.dark .timeline-number,
+.dark .timeline-period,
+.dark .timeline-item h3 { color: var(--color-rosa); }
+.dark .timeline-featured { background: color-mix(in srgb, var(--color-magenta-oscuro) 38%, var(--color-tinta)); }
+.dark .timeline-badge { color: var(--color-dorado-claro); }
+.dark .production { border-color: color-mix(in srgb, var(--color-dorado) 45%, transparent); }
+.dark .production h4,
+.dark .training-grid h3,
+.dark .specs-grid dt { color: var(--color-rosa); }
+.dark .education-list li,
+.dark .specs-grid,
+.dark .specs-grid > div > div { border-color: color-mix(in srgb, var(--color-rosa) 18%, transparent); }
+.dark .workshop-list span { border-color: var(--color-rosa); background: color-mix(in srgb, var(--color-tinta) 86%, var(--color-magenta-oscuro)); }
+.dark .gallery-placeholder,
+.dark .lightbox-image { background: linear-gradient(145deg, color-mix(in srgb, var(--color-magenta-oscuro) 65%, var(--color-tinta)), var(--color-tinta)); color: var(--color-rosa); }
+.dark .lightbox > button { background: var(--color-tinta); color: var(--color-rosa-suave); }
+.dark .site-footer { border-top: 1px solid color-mix(in srgb, var(--color-dorado) 30%, transparent); }
+body,
+.site-header,
+.about-section,
+.disciplines-section,
+.experience-section,
+.training-section,
+.gallery-section,
+.specs-section { transition: background-color .3s ease, color .3s ease; }
 
 @media (max-width: 900px) {
   .desktop-nav { display: none; }

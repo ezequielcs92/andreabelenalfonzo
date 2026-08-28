@@ -9,7 +9,8 @@
     "scroll": "Scroll to discover",
     "menuOpen": "Open menu",
     "menuClose": "Close menu",
-    "language": "Language"
+    "language": "Language",
+    "themeToggle": "Switch light or dark theme"
   },
   "nav": {
     "about": "About",

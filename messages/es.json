@@ -9,7 +9,8 @@
     "scroll": "Deslizar para descubrir",
     "menuOpen": "Abrir menú",
     "menuClose": "Cerrar menú",
-    "language": "Idioma"
+    "language": "Idioma",
+    "themeToggle": "Cambiar tema claro u oscuro"
   },
   "nav": {
     "about": "Sobre mí",
