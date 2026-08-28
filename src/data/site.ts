@@ -1,5 +1,7 @@
+const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://andreabelenalfonzo.com";
+  configuredSiteUrl || "https://andreabelenalfonzo.com";
 
 export const contact = {
   email: "andreabelenalfonzo1@gmail.com",
