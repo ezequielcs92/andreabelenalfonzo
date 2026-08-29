@@ -1,12 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import { X } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { SectionHeading } from "@/components/layout/SectionHeading";
 import { galleryItems } from "@/data/gallery";
+
+function getTileVariant(index: number) {
+  const position = index % 10;
+  if (position === 0) return "media-tile-feature";
+  if (position === 1 || position === 2) return "media-tile-tall";
+  if (position === 3) return "media-tile-wide";
+  return "media-tile-square";
+}
+
+function getAdjacentItemId(current: string | null, direction: -1 | 1) {
+  const currentIndex = galleryItems.findIndex((item) => item.id === current);
+  if (currentIndex < 0) return null;
+  return galleryItems[(currentIndex + direction + galleryItems.length) % galleryItems.length].id;
+}
 
 export function Gallery() {
   const t = useTranslations("gallery");
@@ -15,14 +29,18 @@ export function Gallery() {
   const closeRef = useRef<HTMLButtonElement>(null);
   const triggerRef = useRef<HTMLButtonElement | null>(null);
   const selectedItem = galleryItems.find((item) => item.id === selected);
+  const selectedIndex = galleryItems.findIndex((item) => item.id === selected);
+  const isOpen = selected !== null;
 
   useEffect(() => {
-    if (!selected) return;
+    if (!isOpen) return;
 
     document.body.style.overflow = "hidden";
     closeRef.current?.focus();
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") setSelected(null);
+      if (event.key === "ArrowLeft") setSelected((current) => getAdjacentItemId(current, -1));
+      if (event.key === "ArrowRight") setSelected((current) => getAdjacentItemId(current, 1));
     };
     window.addEventListener("keydown", onKeyDown);
 
@@ -31,7 +49,7 @@ export function Gallery() {
       window.removeEventListener("keydown", onKeyDown);
       triggerRef.current?.focus();
     };
-  }, [selected]);
+  }, [isOpen]);
 
   return (
     <section id="photos" className="section gallery-section">
@@ -39,10 +57,10 @@ export function Gallery() {
         <SectionHeading eyebrow={t("eyebrow")} title={t("title")} />
         <p className="gallery-lead">{t("lead")}</p>
         <div className="gallery-grid">
-          {galleryItems.map((item) => (
+          {galleryItems.map((item, index) => (
             <button
               key={item.id}
-              className="gallery-item"
+              className={`gallery-item ${getTileVariant(index)}`}
               type="button"
               aria-label={`${t("open")}: ${t("imageAlt", { number: Number(item.id) })}`}
               onClick={(event) => {
@@ -91,6 +109,26 @@ export function Gallery() {
               />
             </motion.div>
             <button
+              className="carousel-control carousel-control-previous"
+              type="button"
+              aria-label={t("previous")}
+              onClick={() => setSelected((current) => getAdjacentItemId(current, -1))}
+            >
+              <ChevronLeft aria-hidden="true" />
+            </button>
+            <button
+              className="carousel-control carousel-control-next"
+              type="button"
+              aria-label={t("next")}
+              onClick={() => setSelected((current) => getAdjacentItemId(current, 1))}
+            >
+              <ChevronRight aria-hidden="true" />
+            </button>
+            <p className="carousel-counter" aria-live="polite">
+              {t("position", { current: selectedIndex + 1, total: galleryItems.length })}
+            </p>
+            <button
+              className="modal-close"
               ref={closeRef}
               type="button"
               aria-label={t("close")}

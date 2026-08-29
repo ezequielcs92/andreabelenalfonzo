@@ -356,7 +356,8 @@ No publicar sin confirmación de la artista. Se deja registrado para no perderlo
 ## 7. Videos
 
 Sección separada de Fotos y Números completos. Contiene los 22 clips entregados, alojados
-en Cloudflare Stream y reproducidos en un modal diferido.
+en Cloudflare Stream y presentados en un mosaico editorial asimétrico. El modal diferido
+permite recorrer todos los videos como carrusel sin volver a la grilla.
 
 | Clave | ES | EN |
 | --- | --- | --- |
@@ -365,6 +366,9 @@ en Cloudflare Stream y reproducidos en un modal diferido.
 | Introducción | Ensayos, funciones y fragmentos escénicos en una colección de video independiente. | Rehearsals, performances and stage excerpts in a dedicated video collection. |
 | Acción | Reproducir video | Play video |
 | Cerrar | Cerrar video | Close video |
+| Anterior | Video anterior | Previous video |
+| Siguiente | Video siguiente | Next video |
+| Posición | Video {current} de {total} | Video {current} of {total} |
 
 ---
 
@@ -445,6 +449,9 @@ Mensaje pre-cargado de WhatsApp:
 | `nav.specs` | Ficha técnica | Stats |
 | `nav.contact` | Contacto | Contact |
 | `gallery.imageAlt` | Andrea Alfonzo en escena, fotografía {number} | Andrea Alfonzo on stage, photograph {number} |
+| `gallery.previous` | Foto anterior | Previous photo |
+| `gallery.next` | Foto siguiente | Next photo |
+| `gallery.position` | Foto {current} de {total} | Photo {current} of {total} |
 | `hero.tagline` | Aerialista y bailarina | Aerialist and dancer |
 | `hero.location` | Buenos Aires, Argentina · Disponible para viajar | Buenos Aires, Argentina · Available to travel |
 | `hero.ctaPrimary` | Contratar | Book me |

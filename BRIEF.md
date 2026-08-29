@@ -256,18 +256,21 @@ Fondo `rosa-suave`.
 
 ### 5.7 Fotos
 
-Grilla uniforme con las 64 imágenes entregadas. Todas las miniaturas usan `cover` con el
-encuadre centrado, Cloudflare Images y `next/image` (`fill` + `sizes` correctos).
+Mosaico editorial asimétrico con las 64 imágenes entregadas: alterna piezas protagonistas,
+verticales, panorámicas y cuadradas. Todas las miniaturas usan `cover` con el encuadre
+centrado, Cloudflare Images y `next/image` (`fill` + `sizes` correctos).
 
-Click en una foto abre un lightbox simple con `AnimatePresence` y `layoutId` (transición
-compartida entre la miniatura y la vista grande). Cerrar con Esc, click afuera y botón.
-Bloquear el scroll del body mientras está abierto y devolver el foco al abrir/cerrar.
+Click en una foto abre un lightbox tipo carrusel con `AnimatePresence` y `layoutId`. Permite
+recorrer las 64 imágenes con controles anterior/siguiente y flechas del teclado, sin cerrar
+el modal. Cerrar con Esc, click afuera y botón; bloquear el scroll y devolver el foco.
 
 ### 5.8 Videos
 
-Sección independiente con los 22 clips entregados, alojados en **Cloudflare Stream**.
-Mostrar miniaturas `cover` centradas y montar el player responsive recién cuando el usuario
-elige reproducir; el iframe no forma parte de la carga inicial. Sin autoplay con sonido.
+Sección independiente con los 22 clips entregados, alojados en **Cloudflare Stream** y
+presentados en el mismo lenguaje de mosaico editorial asimétrico de Fotos. Mostrar
+miniaturas `cover` centradas y montar el player responsive recién cuando el usuario elige
+reproducir; el iframe no forma parte de la carga inicial. El modal funciona como carrusel
+con controles anterior/siguiente y flechas del teclado. Sin autoplay con sonido.
 
 ### 5.9 Números completos
 

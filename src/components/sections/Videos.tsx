@@ -1,13 +1,27 @@
 "use client";
 
 import Image from "next/image";
-import { Play, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Play, X } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { SectionHeading } from "@/components/layout/SectionHeading";
 import { getStreamIframe, getStreamThumbnail } from "@/data/site";
 import { videos } from "@/data/videos";
+
+function getTileVariant(index: number) {
+  const position = index % 10;
+  if (position === 0) return "media-tile-feature";
+  if (position === 1 || position === 2) return "media-tile-tall";
+  if (position === 3) return "media-tile-wide";
+  return "media-tile-square";
+}
+
+function getAdjacentVideoId(current: string | null, direction: -1 | 1) {
+  const currentIndex = videos.findIndex((video) => video.id === current);
+  if (currentIndex < 0) return null;
+  return videos[(currentIndex + direction + videos.length) % videos.length].id;
+}
 
 function formatDuration(seconds: number) {
   const minutes = Math.floor(seconds / 60);
@@ -22,14 +36,18 @@ export function Videos() {
   const closeRef = useRef<HTMLButtonElement>(null);
   const triggerRef = useRef<HTMLButtonElement | null>(null);
   const selectedVideo = videos.find((video) => video.id === selectedId);
+  const selectedIndex = videos.findIndex((video) => video.id === selectedId);
+  const isOpen = selectedId !== null;
 
   useEffect(() => {
-    if (!selectedId) return;
+    if (!isOpen) return;
 
     document.body.style.overflow = "hidden";
     closeRef.current?.focus();
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") setSelectedId(null);
+      if (event.key === "ArrowLeft") setSelectedId((current) => getAdjacentVideoId(current, -1));
+      if (event.key === "ArrowRight") setSelectedId((current) => getAdjacentVideoId(current, 1));
     };
     window.addEventListener("keydown", onKeyDown);
 
@@ -38,7 +56,7 @@ export function Videos() {
       window.removeEventListener("keydown", onKeyDown);
       triggerRef.current?.focus();
     };
-  }, [selectedId]);
+  }, [isOpen]);
 
   return (
     <section id="videos" className="section videos-section">
@@ -50,7 +68,7 @@ export function Videos() {
             <motion.button
               key={video.id}
               type="button"
-              className="video-card"
+              className={`video-card ${getTileVariant(index)}`}
               aria-label={`${t("play")}: ${t("item", { number: Number(video.id) })}`}
               initial={reduce ? false : { y: 24 }}
               whileInView={{ y: 0 }}
@@ -91,7 +109,7 @@ export function Videos() {
               if (event.target === event.currentTarget) setSelectedId(null);
             }}
           >
-            <div className="stream-player">
+            <div className="stream-player" key={selectedVideo.uid}>
               <iframe
                 src={getStreamIframe(selectedVideo.uid)}
                 title={t("item", { number: Number(selectedVideo.id) })}
@@ -99,7 +117,26 @@ export function Videos() {
                 allowFullScreen
               />
             </div>
-            <button ref={closeRef} type="button" aria-label={t("close")} onClick={() => setSelectedId(null)}>
+            <button
+              className="carousel-control carousel-control-previous"
+              type="button"
+              aria-label={t("previous")}
+              onClick={() => setSelectedId((current) => getAdjacentVideoId(current, -1))}
+            >
+              <ChevronLeft aria-hidden="true" />
+            </button>
+            <button
+              className="carousel-control carousel-control-next"
+              type="button"
+              aria-label={t("next")}
+              onClick={() => setSelectedId((current) => getAdjacentVideoId(current, 1))}
+            >
+              <ChevronRight aria-hidden="true" />
+            </button>
+            <p className="carousel-counter" aria-live="polite">
+              {t("position", { current: selectedIndex + 1, total: videos.length })}
+            </p>
+            <button className="modal-close" ref={closeRef} type="button" aria-label={t("close")} onClick={() => setSelectedId(null)}>
               <X aria-hidden="true" />
             </button>
           </motion.div>

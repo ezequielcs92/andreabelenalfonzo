@@ -142,6 +142,9 @@
     "lead": "La colección completa de escenas, disciplinas, movimiento y presencia escénica.",
     "open": "Ampliar imagen",
     "close": "Cerrar imagen",
+    "previous": "Foto anterior",
+    "next": "Foto siguiente",
+    "position": "Foto {current} de {total}",
     "imageAlt": "Andrea Alfonzo en escena, fotografía {number}"
   },
   "videos": {
@@ -150,7 +153,10 @@
     "lead": "Ensayos, funciones y fragmentos escénicos en una colección de video independiente.",
     "item": "Video {number}",
     "play": "Reproducir video",
-    "close": "Cerrar video"
+    "close": "Cerrar video",
+    "previous": "Video anterior",
+    "next": "Video siguiente",
+    "position": "Video {current} de {total}"
   },
   "fullActs": {
     "eyebrow": "Presentaciones completas",

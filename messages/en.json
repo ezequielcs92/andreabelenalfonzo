@@ -142,6 +142,9 @@
     "lead": "The complete collection of scenes, disciplines, movement and stage presence.",
     "open": "Enlarge image",
     "close": "Close image",
+    "previous": "Previous photo",
+    "next": "Next photo",
+    "position": "Photo {current} of {total}",
     "imageAlt": "Andrea Alfonzo on stage, photograph {number}"
   },
   "videos": {
@@ -150,7 +153,10 @@
     "lead": "Rehearsals, performances and stage excerpts in a dedicated video collection.",
     "item": "Video {number}",
     "play": "Play video",
-    "close": "Close video"
+    "close": "Close video",
+    "previous": "Previous video",
+    "next": "Next video",
+    "position": "Video {current} of {total}"
   },
   "fullActs": {
     "eyebrow": "Complete performances",
