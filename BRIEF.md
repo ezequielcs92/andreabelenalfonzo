@@ -152,6 +152,7 @@ src/
       Experience.tsx
       Training.tsx
       Gallery.tsx
+      FullActs.tsx
       Specs.tsx
       Contact.tsx
     motion/
@@ -162,6 +163,7 @@ src/
     site.ts               # SITE_URL, contacto, enlaces, constantes
     experience.ts         # datos de experiencia, con claves de traducción
     disciplines.ts
+    fullActs.ts            # IDs de YouTube de los números completos
   i18n/
     routing.ts
     request.ts
@@ -264,12 +266,24 @@ Click en una foto abre un lightbox simple con `AnimatePresence` y `layoutId` (tr
 compartida entre la miniatura y la vista grande). Cerrar con Esc, click afuera y botón.
 Bloquear el scroll del body mientras está abierto y devolver el foco al abrir/cerrar.
 
-### 5.8 Ficha técnica
+### 5.8 Números completos
+
+Sección independiente de la galería y de los reels. Presenta números completos alojados
+siempre en **YouTube** mediante tarjetas con miniatura. Al hacer click, abre un modal
+responsive y accesible con el reproductor de `youtube-nocookie.com`. El iframe se monta
+recién cuando el usuario decide reproducir un número: YouTube no forma parte de la carga
+inicial. Cerrar con Esc, click afuera y botón; bloquear el scroll mientras está abierto y
+devolver el foco al disparador al cerrar.
+
+Los IDs se centralizan en `src/data/fullActs.ts` y los títulos bilingües en
+`messages/*.json`. No confundir este contenido con el reel destacado de la galería.
+
+### 5.9 Ficha técnica
 
 Tabla o grilla de datos de casting, con las claves en 600 mayúsculas y los valores en
 400. Estética limpia y densa, tipo hoja técnica. **No incluir el peso.**
 
-### 5.9 Contacto
+### 5.10 Contacto
 
 Bloque de cierre en `magenta-oscuro`. Titular grande, la línea de disponibilidad, y tres
 botones grandes:
@@ -311,8 +325,9 @@ El pedido es "muchas animaciones y diversión, pero muy profesional". La lectura
 | 9 | Experiencia | Línea vertical dorada que se dibuja siguiendo el scroll | `useScroll` de la sección → `scaleY` de la línea; los puntos se encienden al pasar |
 | 10 | Formación | Chips que entran en cascada | Stagger corto sobre la lista |
 | 11 | Galería | Transición compartida miniatura → lightbox | `layoutId` + `AnimatePresence` |
-| 12 | Ficha técnica | Números y valores que suben en cascada | Reveal con stagger por fila |
-| 13 | Contacto | Botones con relleno que barre desde el borde en hover | Pseudo-elemento con `scaleX`, o `motion` con `originX` |
+| 12 | Números completos | Tarjetas que entran en cascada y modal con fundido | `whileInView` + `AnimatePresence` |
+| 13 | Ficha técnica | Números y valores que suben en cascada | Reveal con stagger por fila |
+| 14 | Contacto | Botones con relleno que barre desde el borde en hover | Pseudo-elemento con `scaleX`, o `motion` con `originX` |
 | 14 | Header | El nav aparece/desaparece según dirección de scroll | Comparar el valor previo de `scrollY` con `useMotionValueEvent` |
 
 ### Movimiento reducido — obligatorio
@@ -531,7 +546,7 @@ npm run lint
 ```
 
 - [ ] `npm run build` termina sin errores ni warnings de tipos.
-- [ ] `/es` y `/en` renderizan las ocho secciones completas, con el mismo contenido.
+- [ ] `/es` y `/en` renderizan las nueve secciones completas, con el mismo contenido.
 - [ ] Las dos rutas se prerenderizan estáticamente (verlo en la salida del build).
 - [ ] `curl -s localhost:3000/es | grep -i "suspensión capilar"` devuelve resultado —
       el contenido está en el HTML del servidor, no depende de JS.
@@ -559,7 +574,7 @@ npm run lint
 2. next-intl: routing, request, layout `[locale]`, `messages/es.json` y `en.json`
    completos desde `content/andrea.md`. **Antes que cualquier componente**, para no
    tener que desharcodear strings después.
-3. Estructura estática de las ocho secciones, sin animación, con placeholders. Verificar
+3. Estructura estática de las nueve secciones, sin animación, con placeholders. Verificar
    que se lee entero y que responde bien.
 4. SEO completo: metadata, sitemap, robots, OG image, JSON-LD. Verificar con los
    criterios de §10 antes de seguir.

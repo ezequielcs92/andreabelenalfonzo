@@ -135,6 +135,25 @@ button { color: inherit; font: inherit; }
 .lightbox-image { width: min(900px, 90vw); height: min(76vh, 800px); }
 .lightbox > button { position: absolute; top: 2rem; right: 2rem; display: grid; width: 48px; height: 48px; place-items: center; border: 1px solid var(--color-dorado); border-radius: 50%; background: var(--color-blanco); }
 
+.full-acts-section { background: var(--color-tinta); color: var(--color-blanco); }
+.full-acts-lead { max-width: 54ch; margin: -3rem 0 3rem auto; color: var(--color-rosa-suave); font-weight: 300; line-height: 1.7; }
+.full-acts-empty { display: grid; min-height: 280px; padding: 2rem; place-items: center; border: 1px solid color-mix(in srgb, var(--color-dorado) 55%, transparent); color: var(--color-dorado-claro); text-align: center; }
+.full-acts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+.full-act-card { position: relative; aspect-ratio: 16 / 9; overflow: hidden; padding: 0; border: 1px solid color-mix(in srgb, var(--color-dorado) 55%, transparent); background: var(--color-magenta-oscuro); color: var(--color-blanco); cursor: pointer; text-align: left; }
+.full-act-card img { object-fit: cover; transition: transform .6s ease; }
+.full-act-card:hover img { transform: scale(1.04); }
+.full-act-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, color-mix(in srgb, var(--color-tinta) 92%, transparent)); }
+.full-act-play { position: absolute; top: 50%; left: 50%; display: grid; width: 64px; height: 64px; place-items: center; border: 1px solid var(--color-dorado); border-radius: 50%; background: color-mix(in srgb, var(--color-tinta) 72%, transparent); transform: translate(-50%, -50%); transition: background-color .25s ease, transform .25s ease; }
+.full-act-play svg { width: 24px; fill: currentColor; }
+.full-act-card:hover .full-act-play { background: var(--color-dorado); color: var(--color-tinta); transform: translate(-50%, -50%) scale(1.08); }
+.full-act-copy { position: absolute; right: 1.5rem; bottom: 1.5rem; left: 1.5rem; display: flex; flex-direction: column; gap: .35rem; }
+.full-act-copy small { color: var(--color-dorado-claro); font-size: .65rem; letter-spacing: .16em; text-transform: uppercase; }
+.full-act-copy strong { font-size: clamp(1.25rem, 2.5vw, 2rem); line-height: 1.1; text-transform: uppercase; }
+.youtube-modal { position: fixed; z-index: 600; inset: 0; display: grid; padding: clamp(1rem, 5vw, 5rem); place-items: center; background: color-mix(in srgb, var(--color-tinta) 96%, transparent); }
+.youtube-player { width: min(1100px, 100%); aspect-ratio: 16 / 9; background: var(--color-tinta); box-shadow: 0 24px 80px color-mix(in srgb, var(--color-tinta) 70%, transparent); }
+.youtube-player iframe { display: block; width: 100%; height: 100%; border: 0; }
+.youtube-modal > button { position: absolute; top: 2rem; right: 2rem; display: grid; width: 48px; height: 48px; padding: 0; place-items: center; border: 1px solid var(--color-dorado); border-radius: 50%; background: var(--color-blanco); color: var(--color-tinta); cursor: pointer; }
+
 .specs-section { background: var(--color-rosa-suave); }
 .specs-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0; border-top: 1px solid var(--color-rosa); }
 .specs-grid > div > div { min-height: 130px; padding: 1.5rem; border-right: 1px solid var(--color-rosa); border-bottom: 1px solid var(--color-rosa); }
@@ -196,6 +215,7 @@ body,
 .experience-section,
 .training-section,
 .gallery-section,
+.full-acts-section,
 .specs-section { transition: background-color .3s ease, color .3s ease; }
 
 @media (max-width: 900px) {
@@ -206,6 +226,7 @@ body,
   .experience-shell > .section-heading { position: static; }
   .training-grid { gap: 3rem; }
   .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+  .full-acts-grid { grid-template-columns: 1fr; }
   .specs-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -227,9 +248,12 @@ body,
   .timeline-item { padding-left: 1rem; }
   .timeline-featured { margin-right: 0; margin-left: -.5rem; padding-left: 1.5rem; }
   .gallery-lead { margin-top: -1.5rem; }
+  .full-acts-lead { margin-top: -1.5rem; }
   .gallery-grid { grid-auto-rows: 170px; grid-template-columns: repeat(2, 1fr); }
   .gallery-wide { grid-column: span 2; }
   .reel-placeholder { min-height: 260px; }
+  .full-acts-empty { min-height: 220px; }
+  .youtube-modal > button { top: 1rem; right: 1rem; }
   .specs-grid { grid-template-columns: 1fr; }
   .contact-links a { grid-template-columns: 36px 1fr 28px; }
   .site-footer { flex-direction: column; }

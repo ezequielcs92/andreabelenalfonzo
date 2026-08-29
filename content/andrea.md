@@ -353,7 +353,26 @@ No publicar sin confirmación de la artista. Se deja registrado para no perderlo
 
 ---
 
-## 7. Ficha técnica (casting)
+## 7. Números completos
+
+Sección separada de la galería y de los reels. Los videos son números completos y se
+alojan siempre en YouTube. Se reproducen en un modal y no se cargan hasta que la persona
+elige verlos.
+
+| Clave | ES | EN |
+| --- | --- | --- |
+| Título | Números completos | Full acts |
+| Antetítulo | Presentaciones completas | Complete performances |
+| Introducción | Presentaciones completas para conocer cada propuesta escénica de principio a fin. | Complete performances to experience each stage piece from beginning to end. |
+| Estado sin videos | Los primeros números completos estarán disponibles próximamente. | The first full acts will be available soon. |
+| Acción | Ver número completo | Watch full act |
+| Cerrar | Cerrar video | Close video |
+
+Enlaces pendientes de entrega.
+
+---
+
+## 8. Ficha técnica (casting)
 
 | Campo ES | Campo EN | Valor ES | Valor EN |
 | --- | --- | --- | --- |
@@ -377,7 +396,7 @@ No publicar sin confirmación de la artista. Se deja registrado para no perderlo
 
 ---
 
-## 8. Contacto
+## 9. Contacto
 
 | Canal | Valor | Enlace |
 | --- | --- | --- |
@@ -393,7 +412,7 @@ Mensaje pre-cargado de WhatsApp:
 
 ---
 
-## 9. Microcopy del sitio
+## 10. Microcopy del sitio
 
 | Clave | ES | EN |
 | --- | --- | --- |
@@ -402,6 +421,7 @@ Mensaje pre-cargado de WhatsApp:
 | `nav.experience` | Experiencia | Experience |
 | `nav.training` | Formación | Training |
 | `nav.gallery` | Galería | Gallery |
+| `nav.fullActs` | Números completos | Full acts |
 | `nav.specs` | Ficha técnica | Stats |
 | `nav.contact` | Contacto | Contact |
 | `hero.tagline` | Aerialista y bailarina | Aerialist and dancer |
@@ -414,10 +434,11 @@ Mensaje pre-cargado de WhatsApp:
 
 ---
 
-## 10. Huecos pendientes
+## 11. Huecos pendientes
 
 - [ ] Fotos profesionales (no entregadas todavía)
 - [ ] Video / reel (no entregado todavía)
+- [ ] Enlaces de YouTube para Números completos
 - [ ] Confirmar si Circo Dacktari queda fuera a propósito (§5.8)
 
 Resueltos:

@@ -18,6 +18,7 @@
     "experience": "Experience",
     "training": "Training",
     "gallery": "Gallery",
+    "fullActs": "Full acts",
     "specs": "Stats",
     "contact": "Contact"
   },
@@ -154,6 +155,15 @@
       "08": "galeria-08.jpg",
       "09": "galeria-09.jpg"
     }
+  },
+  "fullActs": {
+    "eyebrow": "Complete performances",
+    "title": "Full acts",
+    "lead": "Complete performances to experience each stage piece from beginning to end.",
+    "empty": "The first full acts will be available soon.",
+    "play": "Watch full act",
+    "close": "Close video",
+    "items": {}
   },
   "specs": {
     "eyebrow": "Casting details",
