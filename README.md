@@ -28,3 +28,7 @@ en desarrollo. En Vercel, definir `NEXT_PUBLIC_SITE_URL` con el dominio de produ
 Los archivos requeridos y sus proporciones están documentados en
 `public/media/README.md`. Mientras no estén disponibles, el sitio muestra bloques de la
 paleta con el nombre de cada archivo pendiente.
+
+La infraestructura definida es Cloudflare Images para imágenes y posters, R2 para videos
+cortos en loop y Cloudflare Stream para reels o videos largos. El frontend solo utiliza
+URLs e identificadores públicos; ninguna credencial de Cloudflare forma parte del proyecto.

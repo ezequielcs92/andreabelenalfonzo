@@ -29,6 +29,7 @@ Tiene que lograr tres cosas al mismo tiempo:
 | --- | --- |
 | Idiomas | Español (default) e inglés, en rutas separadas `/es` y `/en` |
 | Material visual | **Todavía no hay fotos ni video.** Se construye con placeholders y estructura lista para reemplazar sin tocar código |
+| Infraestructura multimedia | Cloudflare Images para fotos, R2 para loops y Stream para videos largos |
 | Contacto | WhatsApp + email + Instagram. **Sin formulario, sin backend, sin secretos** |
 | Hosting | Vercel, dominio **andreabelenalfonzo.com** → siempre leído desde `NEXT_PUBLIC_SITE_URL` |
 | Repositorio | `https://github.com/ezequielcs92/andreabelenalfonzo.git` |
@@ -52,6 +53,9 @@ Fijado para coincidir con los otros proyectos de `D:\Desarrollos` (`Locutora`,
 | i18n | `next-intl` v4 |
 | Fuente | Poppins vía `next/font/google` |
 | Íconos | `lucide-react` |
+| Imágenes | Cloudflare Images con variantes responsive |
+| Videos cortos en loop | Cloudflare R2 con dominio público de medios |
+| Videos largos | Cloudflare Stream con reproducción adaptativa |
 | Deploy | Vercel |
 
 Sin Supabase, sin Resend, sin base de datos. El sitio es estático: todas las rutas deben
@@ -252,8 +256,9 @@ Fondo `rosa-suave`.
 Grilla asimétrica de 6 a 9 espacios para fotos, más un espacio destacado para el reel.
 Todo con placeholders y `next/image` ya configurado (`fill` + `sizes` correctos).
 
-El reel: `<video>` con `poster`, `preload="none"` y controles nativos. No autoplay con
-sonido, nunca.
+El reel se aloja en **Cloudflare Stream**. Mostrar primero su poster estático y montar el
+player responsive recién cuando el usuario elige reproducirlo; el iframe o player no forma
+parte de la carga inicial. Sin autoplay con sonido, nunca.
 
 Click en una foto abre un lightbox simple con `AnimatePresence` y `layoutId` (transición
 compartida entre la miniatura y la vista grande). Cerrar con Esc, click afuera y botón.
@@ -469,7 +474,11 @@ Rich Results Test antes de dar por cerrada la tarea.
 
 - `next/image` en todo. `priority` **solo** en la imagen del hero.
 - Fuente con `display: swap` y `variable`.
-- Video del hero: `poster`, `preload="none"`, `muted`, `playsInline`, `loop`.
+- Video del hero servido desde R2: `poster`, `preload="none"`, `muted`, `playsInline`,
+  `loop`. Iniciarlo después del contenido crítico y mantener el poster para ahorro de datos
+  y movimiento reducido.
+- Player de Cloudflare Stream: no crear iframe ni cargar scripts hasta la interacción del
+  usuario.
 - Los componentes de animación son cliente; las secciones de texto puro se quedan como
   Server Components. No poner `"use client"` en el `page.tsx`.
 - Lighthouse objetivo: ≥ 95 en Performance, Accesibilidad, Best Practices y SEO.
@@ -483,19 +492,32 @@ Andrea todavía no entregó fotos ni video. Construir con placeholders y dejar
 
 | Archivo | Uso | Proporción sugerida |
 | --- | --- | --- |
-| `hero.jpg` | Fondo del hero (fallback del video) | 16:9, mínimo 2400 px de ancho |
-| `hero.mp4` | Video de fondo del hero | 16:9, ≤ 8 MB, sin audio, 10–20 s en loop |
-| `portrait.jpg` | Retrato de "Sobre mí" | 3:4 vertical |
-| `disciplina-hair-hanging.jpg` | Card de suspensión capilar | 4:5 |
-| `disciplina-aerial-lyra.jpg` | Card de lira | 4:5 |
-| `disciplina-aerial-drop.jpg` | Card de cintas gota | 4:5 |
-| `disciplina-aerial-silks.jpg` | Card de tela aérea | 4:5 |
-| `galeria-01.jpg` … `galeria-09.jpg` | Grilla de galería | Mezcla de 4:5 y 16:9 |
-| `reel.mp4` + `reel-poster.jpg` | Reel destacado | 16:9 |
-| `og.jpg` | Fallback de redes | 1200×630 |
+| `hero.jpg` | Fondo del hero en Cloudflare Images | 16:9, mínimo 2400 px de ancho |
+| `hero.mp4` | Video de fondo en R2 | 16:9, ≤ 8 MB, sin audio, 10–20 s en loop |
+| `portrait.jpg` | Cloudflare Images · Retrato de "Sobre mí" | 3:4 vertical |
+| `disciplina-hair-hanging.jpg` | Cloudflare Images · Suspensión capilar | 4:5 |
+| `disciplina-aerial-lyra.jpg` | Cloudflare Images · Lira | 4:5 |
+| `disciplina-aerial-drop.jpg` | Cloudflare Images · Cintas gota | 4:5 |
+| `disciplina-aerial-silks.jpg` | Cloudflare Images · Tela aérea | 4:5 |
+| `galeria-01.jpg` … `galeria-09.jpg` | Cloudflare Images · Galería | Mezcla de 4:5 y 16:9 |
+| `reel.mp4` | Fuente para cargar en Cloudflare Stream | 16:9 |
+| `reel-poster.jpg` | Poster del reel en Cloudflare Images | 16:9 |
+| `og.jpg` | Cloudflare Images · Fallback de redes | 1200×630 |
 
 Los placeholders deben ser bloques en la paleta del sitio con el nombre del archivo
 encima, no fotos de stock: así se ve de un vistazo qué falta.
+
+### Distribución de medios
+
+- Las imágenes finales y posters se publican en Cloudflare Images con variantes responsive.
+- Los videos cortos en loop se publican en R2 mediante un dominio público dedicado,
+  idealmente `media` bajo el dominio del sitio.
+- Los reels y videos largos se cargan en Cloudflare Stream para obtener transcodificación,
+  streaming adaptativo y poster/thumbnails.
+- El código utiliza únicamente URLs e identificadores públicos. Las credenciales de Images,
+  R2 y Stream quedan exclusivamente en Cloudflare y nunca se exponen en Vercel o el navegador.
+- Centralizar la URL de entrega de Images, la URL pública de R2 y los UID de Stream en
+  `src/data/site.ts` cuando el cliente entregue esos valores.
 
 ---
 

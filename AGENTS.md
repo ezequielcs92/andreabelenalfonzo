@@ -16,10 +16,18 @@ del proyecto. Los textos salen de [`content/andrea.md`](content/andrea.md).
 - **next-intl v4** para el bilingüe (`messages/es.json`, `messages/en.json`, rutas `/es` y `/en`)
 - **Poppins** vía `next/font/google`
 - **lucide-react** para íconos
+- **Cloudflare Images** para imágenes y posters
+- **Cloudflare R2** para videos cortos en loop
+- **Cloudflare Stream** para reels y videos largos
 
 No hay base de datos, backend, formulario ni panel de administración. **No agregar
 Supabase, Resend ni ningún servicio con credenciales**: el contacto es WhatsApp, email e
 Instagram, y el sitio debe poder prerenderizarse entero.
+
+Los identificadores públicos de Images, R2 y Stream pueden llegar al cliente, pero nunca
+guardar tokens de API, claves de acceso ni secretos de Cloudflare en el repositorio o el frontend.
+El reproductor de Stream se monta de forma diferida, solo cuando el usuario decide ver el
+video.
 
 ## Convenciones
 
