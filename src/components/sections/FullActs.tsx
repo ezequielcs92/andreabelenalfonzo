@@ -45,11 +45,8 @@ export function FullActs() {
           invert
         />
         <p className="full-acts-lead">{t("lead")}</p>
-        {fullActs.length === 0 ? (
-          <div className="full-acts-empty">{t("empty")}</div>
-        ) : (
-          <div className="full-acts-grid">
-            {fullActs.map((act, index) => (
+        <div className="full-acts-grid">
+          {fullActs.map((act, index) => (
               <motion.button
                 key={act.id}
                 type="button"
@@ -65,7 +62,7 @@ export function FullActs() {
                 }}
               >
                 <Image
-                  src={`https://i.ytimg.com/vi/${act.youtubeId}/maxresdefault.jpg`}
+                  src={`https://i.ytimg.com/vi/${act.youtubeId}/hqdefault.jpg`}
                   alt=""
                   fill
                   sizes="(max-width: 700px) 100vw, 50vw"
@@ -77,9 +74,8 @@ export function FullActs() {
                   <strong>{t(`items.${act.id}.title`)}</strong>
                 </span>
               </motion.button>
-            ))}
-          </div>
-        )}
+          ))}
+        </div>
       </div>
       <AnimatePresence>
         {selectedAct && (

@@ -353,9 +353,24 @@ No publicar sin confirmación de la artista. Se deja registrado para no perderlo
 
 ---
 
-## 7. Números completos
+## 7. Videos
 
-Sección separada de la galería y de los reels. Los videos son números completos y se
+Sección separada de Fotos y Números completos. Contiene los 22 clips entregados, alojados
+en Cloudflare Stream y reproducidos en un modal diferido.
+
+| Clave | ES | EN |
+| --- | --- | --- |
+| Título | Videos | Videos |
+| Antetítulo | Movimiento en vivo | Movement in action |
+| Introducción | Ensayos, funciones y fragmentos escénicos en una colección de video independiente. | Rehearsals, performances and stage excerpts in a dedicated video collection. |
+| Acción | Reproducir video | Play video |
+| Cerrar | Cerrar video | Close video |
+
+---
+
+## 8. Números completos
+
+Sección separada de Fotos y Videos. Los contenidos son números completos y se
 alojan siempre en YouTube. Se reproducen en un modal y no se cargan hasta que la persona
 elige verlos.
 
@@ -364,15 +379,19 @@ elige verlos.
 | Título | Números completos | Full acts |
 | Antetítulo | Presentaciones completas | Complete performances |
 | Introducción | Presentaciones completas para conocer cada propuesta escénica de principio a fin. | Complete performances to experience each stage piece from beginning to end. |
-| Estado sin videos | Los primeros números completos estarán disponibles próximamente. | The first full acts will be available soon. |
 | Acción | Ver número completo | Watch full act |
 | Cerrar | Cerrar video | Close video |
 
-Enlaces pendientes de entrega.
+| Título ES | Título EN | YouTube |
+| --- | --- | --- |
+| Fuerza capilar · Cirque XXI 360° | Hair suspension · Cirque XXI 360° | `https://youtu.be/Gr11QsgZSik` |
+| Suspensión capilar · Ensayo TIGROU | Hair suspension · TIGROU rehearsal | `https://youtu.be/C6zeKMumMqs` |
+| Fuerza capilar · Acto completo | Hair suspension · Full act | `https://youtu.be/Sscbh5wW_HA` |
+| Fuerza capilar · Temporada de verano | Hair suspension · Summer season | `https://youtu.be/AT2RcZ4PLVk` |
 
 ---
 
-## 8. Ficha técnica (casting)
+## 9. Ficha técnica (casting)
 
 | Campo ES | Campo EN | Valor ES | Valor EN |
 | --- | --- | --- | --- |
@@ -396,7 +415,7 @@ Enlaces pendientes de entrega.
 
 ---
 
-## 9. Contacto
+## 10. Contacto
 
 | Canal | Valor | Enlace |
 | --- | --- | --- |
@@ -412,7 +431,7 @@ Mensaje pre-cargado de WhatsApp:
 
 ---
 
-## 10. Microcopy del sitio
+## 11. Microcopy del sitio
 
 | Clave | ES | EN |
 | --- | --- | --- |
@@ -420,19 +439,12 @@ Mensaje pre-cargado de WhatsApp:
 | `nav.disciplines` | Disciplinas | Disciplines |
 | `nav.experience` | Experiencia | Experience |
 | `nav.training` | Formación | Training |
-| `nav.gallery` | Galería | Gallery |
+| `nav.photos` | Fotos | Photos |
+| `nav.videos` | Videos | Videos |
 | `nav.fullActs` | Números completos | Full acts |
 | `nav.specs` | Ficha técnica | Stats |
 | `nav.contact` | Contacto | Contact |
-| `gallery.items.01` | Andrea en lira aérea bajo luces doradas | Andrea performing on aerial hoop under golden lights |
-| `gallery.items.02` | Andrea en tela aérea bajo luces violetas | Andrea performing on aerial silks under violet lights |
-| `gallery.items.03` | Andrea en suspensión capilar al aire libre | Andrea performing hair suspension outdoors |
-| `gallery.items.04` | Andrea en una figura de contorsión urbana | Andrea in an urban contortion pose |
-| `gallery.items.05` | Andrea en una pose de danza contemporánea | Andrea in a contemporary dance pose |
-| `gallery.items.06` | Andrea sobre trapecio bajo luces de escenario | Andrea on trapeze under stage lights |
-| `gallery.items.07` | Andrea invertida en lira aérea | Andrea inverted on aerial hoop |
-| `gallery.items.08` | Andrea en una pose editorial de flexibilidad | Andrea in an editorial flexibility pose |
-| `gallery.items.09` | Andrea en un salto de danza en Buenos Aires | Andrea performing a dance jump in Buenos Aires |
+| `gallery.imageAlt` | Andrea Alfonzo en escena, fotografía {number} | Andrea Alfonzo on stage, photograph {number} |
 | `hero.tagline` | Aerialista y bailarina | Aerialist and dancer |
 | `hero.location` | Buenos Aires, Argentina · Disponible para viajar | Buenos Aires, Argentina · Available to travel |
 | `hero.ctaPrimary` | Contratar | Book me |
@@ -443,11 +455,9 @@ Mensaje pre-cargado de WhatsApp:
 
 ---
 
-## 11. Huecos pendientes
+## 12. Huecos pendientes
 
-- [ ] Video / reel (no entregado todavía)
-- [ ] Enlaces de YouTube para Números completos
-- [ ] Confirmar si Circo Dacktari queda fuera a propósito (§5.8)
+- [ ] Confirmar si Circo Dacktari queda fuera a propósito (ver Experiencia en `BRIEF.md` §5.5)
 
 Resueltos:
 
@@ -459,5 +469,5 @@ Resueltos:
 - Compañía Turnoc y sus tres producciones incorporadas a la experiencia publicada
   (2026-08-28)
 - Edén — Lo salvaje de la naturaleza incorporado a la experiencia publicada (2026-08-28)
-- 63 fotos profesionales optimizadas y subidas a Cloudflare Images; hero y galería
-  seleccionados e integrados (2026-08-29)
+- 64 imágenes y 22 videos optimizados e integrados mediante Cloudflare Images y Stream;
+  cuatro números completos incorporados desde YouTube (2026-08-29)

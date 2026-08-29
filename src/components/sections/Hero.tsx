@@ -45,7 +45,7 @@ export function Hero() {
         <p className="hero-tagline">{t("hero.tagline")}</p>
         <div className="hero-actions">
           <a className="button button-primary" href="#contact">{t("hero.ctaPrimary")} <ArrowUpRight /></a>
-          <a className="button button-ghost" href="#gallery">{t("hero.ctaSecondary")}</a>
+          <a className="button button-ghost" href="#photos">{t("hero.ctaSecondary")}</a>
         </div>
       </motion.div>
       <a className="scroll-cue" href="#about"><span>{t("common.scroll")}</span><ArrowDown /></a>

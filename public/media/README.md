@@ -4,10 +4,14 @@ Las imágenes y posters se alojan en **Cloudflare Images**, los videos cortos en
 **Cloudflare R2** y los reels o videos largos en **Cloudflare Stream**. Los nombres de esta
 tabla identifican los originales que debe entregar la artista.
 
-El 2026-08-29 se optimizaron y subieron las 63 fotografías entregadas a Cloudflare Images.
-Usan IDs determinísticos desde `andrea-photo-001` hasta `andrea-photo-063`; cada imagen
-conserva el nombre del archivo original en su metadata. El hero usa `andrea-photo-055` y
-la selección de galería está declarada en `src/data/gallery.ts`.
+El 2026-08-29 se optimizaron y subieron las 64 imágenes actuales a Cloudflare Images.
+Usan IDs determinísticos desde `andrea-media-001` hasta `andrea-media-064`; cada imagen
+conserva el nombre original en su metadata. El hero usa `andrea-media-014`, las cuatro
+disciplinas usan los recortes indicados por la artista y Fotos muestra la biblioteca completa.
+
+Los 22 videos entregados se normalizaron a MP4 H.264/AAC y se subieron a Cloudflare Stream.
+Sus UIDs públicos están en `src/data/videos.ts`; Videos muestra todos los clips y monta el
+player sólo después de la interacción.
 
 | Archivo | Uso | Recomendación |
 | --- | --- | --- |

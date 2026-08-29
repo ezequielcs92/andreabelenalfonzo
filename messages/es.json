@@ -17,7 +17,8 @@
     "disciplines": "Disciplinas",
     "experience": "Experiencia",
     "training": "Formación",
-    "gallery": "Galería",
+    "photos": "Fotos",
+    "videos": "Videos",
     "fullActs": "Números completos",
     "specs": "Ficha técnica",
     "contact": "Contacto"
@@ -136,33 +137,33 @@
     "workshops": ["Theater Jazz", "Contemporáneo", "Danza Jazz", "Ritmos urbanos", "Acrobacia", "Danza clásica", "Flexibilidad", "Clown", "Teatro y Danza"]
   },
   "gallery": {
-    "eyebrow": "En escena",
-    "title": "Galería",
-    "lead": "Una selección visual de disciplinas, movimiento y presencia escénica.",
-    "reel": "Reel destacado",
-    "reelMedia": "reel.mp4 / reel-poster.jpg",
+    "eyebrow": "Archivo visual",
+    "title": "Fotos",
+    "lead": "La colección completa de escenas, disciplinas, movimiento y presencia escénica.",
     "open": "Ampliar imagen",
     "close": "Cerrar imagen",
-    "items": {
-      "01": "Andrea en lira aérea bajo luces doradas",
-      "02": "Andrea en tela aérea bajo luces violetas",
-      "03": "Andrea en suspensión capilar al aire libre",
-      "04": "Andrea en una figura de contorsión urbana",
-      "05": "Andrea en una pose de danza contemporánea",
-      "06": "Andrea sobre trapecio bajo luces de escenario",
-      "07": "Andrea invertida en lira aérea",
-      "08": "Andrea en una pose editorial de flexibilidad",
-      "09": "Andrea en un salto de danza en Buenos Aires"
-    }
+    "imageAlt": "Andrea Alfonzo en escena, fotografía {number}"
+  },
+  "videos": {
+    "eyebrow": "Movimiento en vivo",
+    "title": "Videos",
+    "lead": "Ensayos, funciones y fragmentos escénicos en una colección de video independiente.",
+    "item": "Video {number}",
+    "play": "Reproducir video",
+    "close": "Cerrar video"
   },
   "fullActs": {
     "eyebrow": "Presentaciones completas",
     "title": "Números completos",
     "lead": "Presentaciones completas para conocer cada propuesta escénica de principio a fin.",
-    "empty": "Los primeros números completos estarán disponibles próximamente.",
     "play": "Ver número completo",
     "close": "Cerrar video",
-    "items": {}
+    "items": {
+      "cirque": {"title": "Fuerza capilar · Cirque XXI 360°"},
+      "tigrou": {"title": "Suspensión capilar · Ensayo TIGROU"},
+      "complete": {"title": "Fuerza capilar · Acto completo"},
+      "summer": {"title": "Fuerza capilar · Temporada de verano"}
+    }
   },
   "specs": {
     "eyebrow": "Datos de casting",

@@ -34,7 +34,7 @@ export function Gallery() {
   }, [selected]);
 
   return (
-    <section id="gallery" className="section gallery-section">
+    <section id="photos" className="section gallery-section">
       <div className="section-shell">
         <SectionHeading eyebrow={t("eyebrow")} title={t("title")} />
         <p className="gallery-lead">{t("lead")}</p>
@@ -42,9 +42,9 @@ export function Gallery() {
           {galleryItems.map((item) => (
             <button
               key={item.id}
-              className={`gallery-item ${item.className}`}
+              className="gallery-item"
               type="button"
-              aria-label={`${t("open")}: ${t(`items.${item.id}`)}`}
+              aria-label={`${t("open")}: ${t("imageAlt", { number: Number(item.id) })}`}
               onClick={(event) => {
                 triggerRef.current = event.currentTarget;
                 setSelected(item.id);
@@ -56,16 +56,13 @@ export function Gallery() {
               >
                 <Image
                   src={item.src}
-                  alt={t(`items.${item.id}`)}
+                  alt={t("imageAlt", { number: Number(item.id) })}
                   fill
                   sizes="(max-width: 600px) 50vw, (max-width: 900px) 33vw, 25vw"
                 />
               </motion.div>
             </button>
           ))}
-        </div>
-        <div className="reel-placeholder">
-          <div><span>{t("reel")}</span><strong>{t("reelMedia")}</strong></div>
         </div>
       </div>
       <AnimatePresence>
@@ -74,7 +71,7 @@ export function Gallery() {
             className="lightbox"
             role="dialog"
             aria-modal="true"
-            aria-label={t(`items.${selectedItem.id}`)}
+            aria-label={t("imageAlt", { number: Number(selectedItem.id) })}
             onMouseDown={(event) => {
               if (event.target === event.currentTarget) setSelected(null);
             }}
@@ -88,7 +85,7 @@ export function Gallery() {
             >
               <Image
                 src={selectedItem.src}
-                alt={t(`items.${selectedItem.id}`)}
+                alt={t("imageAlt", { number: Number(selectedItem.id) })}
                 fill
                 sizes="90vw"
               />

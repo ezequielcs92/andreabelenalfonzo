@@ -13,6 +13,10 @@ export default withNextIntl({
         protocol: "https",
         hostname: "i.ytimg.com",
       },
+      {
+        protocol: "https",
+        hostname: "customer-mjd8o63x3qakbzze.cloudflarestream.com",
+      },
     ],
   },
 });

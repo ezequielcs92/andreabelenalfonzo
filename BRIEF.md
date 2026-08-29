@@ -28,7 +28,7 @@ Tiene que lograr tres cosas al mismo tiempo:
 | Tema | Decisión tomada |
 | --- | --- |
 | Idiomas | Español (default) e inglés, en rutas separadas `/es` y `/en` |
-| Material visual | 63 fotos alojadas en Cloudflare Images y loop corto del hero en R2. Reel largo y números completos pendientes |
+| Material visual | 64 imágenes en Cloudflare Images, 22 videos en Stream y 4 números completos en YouTube |
 | Infraestructura multimedia | Cloudflare Images para fotos, R2 para loops y Stream para videos largos |
 | Contacto | WhatsApp + email + Instagram. **Sin formulario, sin backend, sin secretos** |
 | Hosting | Vercel, dominio **andreabelenalfonzo.com** → siempre leído desde `NEXT_PUBLIC_SITE_URL` |
@@ -254,38 +254,39 @@ acordeón.
 Dos columnas: formación titulada a la izquierda, workshops como chips a la derecha.
 Fondo `rosa-suave`.
 
-### 5.7 Galería
+### 5.7 Fotos
 
-Grilla asimétrica de 9 fotos seleccionadas, más un espacio destacado para el reel.
-Las fotos usan Cloudflare Images y `next/image` (`fill` + `sizes` correctos); sólo el reel
-mantiene placeholder hasta recibir el material definitivo.
-
-El reel se aloja en **Cloudflare Stream**. Mostrar primero su poster estático y montar el
-player responsive recién cuando el usuario elige reproducirlo; el iframe o player no forma
-parte de la carga inicial. Sin autoplay con sonido, nunca.
+Grilla uniforme con las 64 imágenes entregadas. Todas las miniaturas usan `cover` con el
+encuadre centrado, Cloudflare Images y `next/image` (`fill` + `sizes` correctos).
 
 Click en una foto abre un lightbox simple con `AnimatePresence` y `layoutId` (transición
 compartida entre la miniatura y la vista grande). Cerrar con Esc, click afuera y botón.
 Bloquear el scroll del body mientras está abierto y devolver el foco al abrir/cerrar.
 
-### 5.8 Números completos
+### 5.8 Videos
 
-Sección independiente de la galería y de los reels. Presenta números completos alojados
+Sección independiente con los 22 clips entregados, alojados en **Cloudflare Stream**.
+Mostrar miniaturas `cover` centradas y montar el player responsive recién cuando el usuario
+elige reproducir; el iframe no forma parte de la carga inicial. Sin autoplay con sonido.
+
+### 5.9 Números completos
+
+Sección independiente de Fotos y Videos. Presenta números completos alojados
 siempre en **YouTube** mediante tarjetas con miniatura. Al hacer click, abre un modal
 responsive y accesible con el reproductor de `youtube-nocookie.com`. El iframe se monta
 recién cuando el usuario decide reproducir un número: YouTube no forma parte de la carga
 inicial. Cerrar con Esc, click afuera y botón; bloquear el scroll mientras está abierto y
 devolver el foco al disparador al cerrar.
 
-Los IDs se centralizan en `src/data/fullActs.ts` y los títulos bilingües en
-`messages/*.json`. No confundir este contenido con el reel destacado de la galería.
+Los cuatro IDs se centralizan en `src/data/fullActs.ts` y los títulos bilingües en
+`messages/*.json`. No confundir este contenido con los clips de Videos.
 
-### 5.9 Ficha técnica
+### 5.10 Ficha técnica
 
 Tabla o grilla de datos de casting, con las claves en 600 mayúsculas y los valores en
 400. Estética limpia y densa, tipo hoja técnica. **No incluir el peso.**
 
-### 5.10 Contacto
+### 5.11 Contacto
 
 Bloque de cierre en `magenta-oscuro`. Titular grande, la línea de disponibilidad, y tres
 botones grandes:
@@ -326,11 +327,12 @@ El pedido es "muchas animaciones y diversión, pero muy profesional". La lectura
 | 8 | Disciplinas | Zoom lento de la imagen en hover | `whileHover={{ scale: 1.04 }}` con transición larga |
 | 9 | Experiencia | Línea vertical dorada que se dibuja siguiendo el scroll | `useScroll` de la sección → `scaleY` de la línea; los puntos se encienden al pasar |
 | 10 | Formación | Chips que entran en cascada | Stagger corto sobre la lista |
-| 11 | Galería | Transición compartida miniatura → lightbox | `layoutId` + `AnimatePresence` |
-| 12 | Números completos | Tarjetas que entran en cascada y modal con fundido | `whileInView` + `AnimatePresence` |
-| 13 | Ficha técnica | Números y valores que suben en cascada | Reveal con stagger por fila |
-| 14 | Contacto | Botones con relleno que barre desde el borde en hover | Pseudo-elemento con `scaleX`, o `motion` con `originX` |
-| 14 | Header | El nav aparece/desaparece según dirección de scroll | Comparar el valor previo de `scrollY` con `useMotionValueEvent` |
+| 11 | Fotos | Transición compartida miniatura → lightbox | `layoutId` + `AnimatePresence` |
+| 12 | Videos | Tarjetas en cascada y modal con Stream diferido | `whileInView` + `AnimatePresence` |
+| 13 | Números completos | Tarjetas que entran en cascada y modal con fundido | `whileInView` + `AnimatePresence` |
+| 14 | Ficha técnica | Números y valores que suben en cascada | Reveal con stagger por fila |
+| 15 | Contacto | Botones con relleno que barre desde el borde en hover | Pseudo-elemento con `scaleX`, o `motion` con `originX` |
+| 16 | Header | El nav aparece/desaparece según dirección de scroll | Comparar el valor previo de `scrollY` con `useMotionValueEvent` |
 
 ### Movimiento reducido — obligatorio
 
@@ -504,10 +506,10 @@ Rich Results Test antes de dar por cerrada la tarea.
 
 ## 9. Entrega de material
 
-Andrea entregó 63 fotos y videos cortos el 2026-08-29. Las fotos optimizadas están en
-Cloudflare Images con IDs `andrea-photo-001` a `andrea-photo-063`; el hero usa
-`andrea-photo-055`. Mantener `public/media/README.md` como registro de la selección y de
-los materiales que todavía faltan:
+Andrea entregó 64 imágenes y 22 videos el 2026-08-29. Las imágenes optimizadas están en
+Cloudflare Images con IDs `andrea-media-001` a `andrea-media-064`; el hero usa
+`andrea-media-014`. Los 22 videos están en Stream y sus UIDs se registran en
+`src/data/videos.ts`:
 
 | Archivo | Uso | Proporción sugerida |
 | --- | --- | --- |
@@ -550,7 +552,7 @@ npm run lint
 ```
 
 - [ ] `npm run build` termina sin errores ni warnings de tipos.
-- [ ] `/es` y `/en` renderizan las nueve secciones completas, con el mismo contenido.
+- [ ] `/es` y `/en` renderizan las diez secciones completas, con el mismo contenido.
 - [ ] Las dos rutas se prerenderizan estáticamente (verlo en la salida del build).
 - [ ] `curl -s localhost:3000/es | grep -i "suspensión capilar"` devuelve resultado —
       el contenido está en el HTML del servidor, no depende de JS.
@@ -578,7 +580,7 @@ npm run lint
 2. next-intl: routing, request, layout `[locale]`, `messages/es.json` y `en.json`
    completos desde `content/andrea.md`. **Antes que cualquier componente**, para no
    tener que desharcodear strings después.
-3. Estructura estática de las nueve secciones, sin animación, con placeholders. Verificar
+3. Estructura estática de las diez secciones, sin animación, con placeholders. Verificar
    que se lee entero y que responde bien.
 4. SEO completo: metadata, sitemap, robots, OG image, JSON-LD. Verificar con los
    criterios de §10 antes de seguir.
@@ -596,7 +598,7 @@ Hacer commits por etapa, en inglés, siguiendo el estilo de los otros repos.
 
 Cosas que dependen del cliente y no bloquean el desarrollo:
 
-- **Fotos y video.** Sin entregar. Placeholders y `public/media/README.md`.
+- **Fotos y video.** Entregados e integrados en Cloudflare Images y Stream.
 - **Confirmar la exclusión** de Circo Dacktari, que estaba en el CV viejo y no aparece en
   la versión en limpio.
 - **Google Search Console.** Una vez publicado: verificar la propiedad de

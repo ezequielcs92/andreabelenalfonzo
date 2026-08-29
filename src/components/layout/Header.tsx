@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { Link, usePathname } from "@/i18n/routing";
 import { ThemeToggle } from "./ThemeToggle";
 
-const navItems = ["about", "disciplines", "experience", "training", "gallery", "fullActs", "specs", "contact"] as const;
+const navItems = ["about", "disciplines", "experience", "training", "photos", "videos", "fullActs", "specs", "contact"] as const;
 
 export function Header() {
   const t = useTranslations();
