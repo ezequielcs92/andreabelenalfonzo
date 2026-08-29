@@ -1,9 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
+import { media } from "@/data/site";
 
 export function Hero() {
   const t = useTranslations();
@@ -18,7 +20,14 @@ export function Hero() {
   return (
     <section ref={ref} id="top" className="hero" aria-labelledby="hero-title">
       <motion.div className="hero-media" style={{ y: backgroundY }}>
-        <div className="hero-media-label">{t("hero.media")}</div>
+        <Image
+          src={media.hero}
+          alt=""
+          fill
+          preload
+          sizes="100vw"
+          className="hero-image"
+        />
       </motion.div>
       <div className="hero-overlay" />
       <motion.div className="hero-content" style={{ y: contentY, opacity: contentOpacity }}>

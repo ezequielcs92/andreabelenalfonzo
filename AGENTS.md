@@ -59,12 +59,13 @@ video.
 - `npm run build` — build de producción
 - `npm run lint` — ESLint
 
-## Material pendiente
+## Material multimedia
 
-Andrea todavía no entregó fotos ni video. El sitio se construye con placeholders; qué
-archivo va en cada lugar está listado en `public/media/README.md`. No usar fotos de stock
-como relleno: los placeholders son bloques de color con el nombre del archivo, para que se
-vea de un vistazo qué falta.
+Andrea entregó 63 fotos y una tanda de videos cortos el 2026-08-29. Las fotos optimizadas
+están en Cloudflare Images con IDs `andrea-photo-001` a `andrea-photo-063`; la selección
+activa está documentada en `public/media/README.md`. El reel largo y los enlaces de YouTube
+para Números completos siguen pendientes. No usar material de stock: donde falte contenido,
+mantener placeholders explícitos.
 
 ## Datos a no publicar
 

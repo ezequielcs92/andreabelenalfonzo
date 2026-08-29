@@ -6,8 +6,13 @@ export const SITE_URL =
 const CLOUDFLARE_IMAGES_URL =
   "https://imagedelivery.net/pnqdzV2zvEe_nleOYtoUKQ";
 
+export function getCloudflareImage(id: string) {
+  return `${CLOUDFLARE_IMAGES_URL}/${id}/public`;
+}
+
 export const media = {
-  portrait: `${CLOUDFLARE_IMAGES_URL}/55a59cda-ac64-4b24-e934-794931066300/public`,
+  hero: getCloudflareImage("andrea-photo-055"),
+  portrait: getCloudflareImage("55a59cda-ac64-4b24-e934-794931066300"),
 } as const;
 
 export const contact = {

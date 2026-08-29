@@ -1,8 +1,13 @@
-# Material pendiente
+# Biblioteca multimedia
 
 Las imágenes y posters se alojan en **Cloudflare Images**, los videos cortos en loop en
 **Cloudflare R2** y los reels o videos largos en **Cloudflare Stream**. Los nombres de esta
 tabla identifican los originales que debe entregar la artista.
+
+El 2026-08-29 se optimizaron y subieron las 63 fotografías entregadas a Cloudflare Images.
+Usan IDs determinísticos desde `andrea-photo-001` hasta `andrea-photo-063`; cada imagen
+conserva el nombre del archivo original en su metadata. El hero usa `andrea-photo-055` y
+la selección de galería está declarada en `src/data/gallery.ts`.
 
 | Archivo | Uso | Recomendación |
 | --- | --- | --- |

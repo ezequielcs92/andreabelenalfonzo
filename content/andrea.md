@@ -424,6 +424,15 @@ Mensaje pre-cargado de WhatsApp:
 | `nav.fullActs` | Números completos | Full acts |
 | `nav.specs` | Ficha técnica | Stats |
 | `nav.contact` | Contacto | Contact |
+| `gallery.items.01` | Andrea en lira aérea bajo luces doradas | Andrea performing on aerial hoop under golden lights |
+| `gallery.items.02` | Andrea en tela aérea bajo luces violetas | Andrea performing on aerial silks under violet lights |
+| `gallery.items.03` | Andrea en suspensión capilar al aire libre | Andrea performing hair suspension outdoors |
+| `gallery.items.04` | Andrea en una figura de contorsión urbana | Andrea in an urban contortion pose |
+| `gallery.items.05` | Andrea en una pose de danza contemporánea | Andrea in a contemporary dance pose |
+| `gallery.items.06` | Andrea sobre trapecio bajo luces de escenario | Andrea on trapeze under stage lights |
+| `gallery.items.07` | Andrea invertida en lira aérea | Andrea inverted on aerial hoop |
+| `gallery.items.08` | Andrea en una pose editorial de flexibilidad | Andrea in an editorial flexibility pose |
+| `gallery.items.09` | Andrea en un salto de danza en Buenos Aires | Andrea performing a dance jump in Buenos Aires |
 | `hero.tagline` | Aerialista y bailarina | Aerialist and dancer |
 | `hero.location` | Buenos Aires, Argentina · Disponible para viajar | Buenos Aires, Argentina · Available to travel |
 | `hero.ctaPrimary` | Contratar | Book me |
@@ -436,7 +445,6 @@ Mensaje pre-cargado de WhatsApp:
 
 ## 11. Huecos pendientes
 
-- [ ] Fotos profesionales (no entregadas todavía)
 - [ ] Video / reel (no entregado todavía)
 - [ ] Enlaces de YouTube para Números completos
 - [ ] Confirmar si Circo Dacktari queda fuera a propósito (§5.8)
@@ -451,3 +459,5 @@ Resueltos:
 - Compañía Turnoc y sus tres producciones incorporadas a la experiencia publicada
   (2026-08-28)
 - Edén — Lo salvaje de la naturaleza incorporado a la experiencia publicada (2026-08-28)
+- 63 fotos profesionales optimizadas y subidas a Cloudflare Images; hero y galería
+  seleccionados e integrados (2026-08-29)

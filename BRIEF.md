@@ -28,7 +28,7 @@ Tiene que lograr tres cosas al mismo tiempo:
 | Tema | Decisión tomada |
 | --- | --- |
 | Idiomas | Español (default) e inglés, en rutas separadas `/es` y `/en` |
-| Material visual | **Todavía no hay fotos ni video.** Se construye con placeholders y estructura lista para reemplazar sin tocar código |
+| Material visual | 63 fotos alojadas en Cloudflare Images y loop corto del hero en R2. Reel largo y números completos pendientes |
 | Infraestructura multimedia | Cloudflare Images para fotos, R2 para loops y Stream para videos largos |
 | Contacto | WhatsApp + email + Instagram. **Sin formulario, sin backend, sin secretos** |
 | Hosting | Vercel, dominio **andreabelenalfonzo.com** → siempre leído desde `NEXT_PUBLIC_SITE_URL` |
@@ -201,14 +201,15 @@ En mobile: menú fullscreen que entra con un `clip-path` o una cortina, no un dr
 - Nombre completo como único `<h1>` de la página.
 - Tagline: "Aerialista y bailarina" / "Aerialist and dancer".
 - Ubicación y disponibilidad en una línea fina con separadores.
-- Fondo: video (placeholder) con `poster`, overlay en degradé magenta→transparente para
-  garantizar contraste. Si no hay video todavía, imagen `next/image` con `priority`.
+- Fondo: imagen elegida para el hero en Cloudflare Images, con overlay en degradé
+  magenta→transparente para garantizar contraste. Si luego se integra el loop de R2, la
+  imagen queda como poster y fallback mediante `next/image` con `preload`.
 - Dos CTA: **Contratar** (ancla a contacto) y **Ver trabajo** (ancla a galería).
 - Un indicador de scroll discreto abajo, en dorado.
 
 ### 5.3 Sobre mí
 
-Retrato a un lado (placeholder, con parallax suave) y la declaración artística larga de
+Retrato a un lado (Cloudflare Images, con parallax suave) y la declaración artística larga de
 `content/andrea.md` al otro. En mobile, retrato arriba y texto abajo.
 
 ### 5.4 Disciplinas
@@ -255,8 +256,9 @@ Fondo `rosa-suave`.
 
 ### 5.7 Galería
 
-Grilla asimétrica de 6 a 9 espacios para fotos, más un espacio destacado para el reel.
-Todo con placeholders y `next/image` ya configurado (`fill` + `sizes` correctos).
+Grilla asimétrica de 9 fotos seleccionadas, más un espacio destacado para el reel.
+Las fotos usan Cloudflare Images y `next/image` (`fill` + `sizes` correctos); sólo el reel
+mantiene placeholder hasta recibir el material definitivo.
 
 El reel se aloja en **Cloudflare Stream**. Mostrar primero su poster estático y montar el
 player responsive recién cuando el usuario elige reproducirlo; el iframe o player no forma
@@ -500,10 +502,12 @@ Rich Results Test antes de dar por cerrada la tarea.
 
 ---
 
-## 9. Placeholders y entrega de material
+## 9. Entrega de material
 
-Andrea todavía no entregó fotos ni video. Construir con placeholders y dejar
-`public/media/README.md` con la lista exacta:
+Andrea entregó 63 fotos y videos cortos el 2026-08-29. Las fotos optimizadas están en
+Cloudflare Images con IDs `andrea-photo-001` a `andrea-photo-063`; el hero usa
+`andrea-photo-055`. Mantener `public/media/README.md` como registro de la selección y de
+los materiales que todavía faltan:
 
 | Archivo | Uso | Proporción sugerida |
 | --- | --- | --- |
@@ -519,8 +523,8 @@ Andrea todavía no entregó fotos ni video. Construir con placeholders y dejar
 | `reel-poster.jpg` | Poster del reel en Cloudflare Images | 16:9 |
 | `og.jpg` | Cloudflare Images · Fallback de redes | 1200×630 |
 
-Los placeholders deben ser bloques en la paleta del sitio con el nombre del archivo
-encima, no fotos de stock: así se ve de un vistazo qué falta.
+Para el reel y cualquier material todavía pendiente, usar bloques en la paleta del sitio
+con el nombre del archivo encima, nunca fotos de stock.
 
 ### Distribución de medios
 
