@@ -357,7 +357,8 @@ No publicar sin confirmación de la artista. Se deja registrado para no perderlo
 
 | Campo ES | Campo EN | Valor ES | Valor EN |
 | --- | --- | --- | --- |
-| Altura | Height | 1,56 m | 1.56 m |
+| Fecha de nacimiento | Date of birth | 13/09/2000 | 13 September 2000 |
+| Altura | Height | 1,63 m | 1.63 m |
 | Cabello | Hair | Largo, hasta la cintura | Long, waist-length |
 | Color de cabello | Hair colour | Moreno | Dark brown |
 | Color de ojos | Eye colour | Marrones | Brown |

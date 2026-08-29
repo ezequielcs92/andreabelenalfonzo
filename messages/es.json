@@ -159,7 +159,8 @@
     "eyebrow": "Datos de casting",
     "title": "Ficha técnica",
     "items": [
-      {"label": "Altura", "value": "1,56 m"},
+      {"label": "Fecha de nacimiento", "value": "13/09/2000"},
+      {"label": "Altura", "value": "1,63 m"},
       {"label": "Cabello", "value": "Largo, hasta la cintura"},
       {"label": "Color de cabello", "value": "Moreno"},
       {"label": "Color de ojos", "value": "Marrones"},

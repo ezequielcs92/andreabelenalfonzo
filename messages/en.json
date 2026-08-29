@@ -159,7 +159,8 @@
     "eyebrow": "Casting details",
     "title": "Technical profile",
     "items": [
-      {"label": "Height", "value": "1.56 m"},
+      {"label": "Date of birth", "value": "13 September 2000"},
+      {"label": "Height", "value": "1.63 m"},
       {"label": "Hair", "value": "Long, waist-length"},
       {"label": "Hair colour", "value": "Dark brown"},
       {"label": "Eye colour", "value": "Brown"},
