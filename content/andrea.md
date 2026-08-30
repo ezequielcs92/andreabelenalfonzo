@@ -481,5 +481,6 @@ Resueltos:
   retiró a pedido de la artista el mismo día)
 - Reemplazos de disciplinas a pedido de la artista: Cintas gota → `andrea-media-065`
   (`Cintas gota .jpg`) y Suspensión capilar → `andrea-media-066` (`PSX_20260722_164459.jpeg`)
-- Nuevo hero a pedido de la artista: `hero.png` (1672×941, rostro centrado) →
-  `andrea-media-067`; verificado en 1440, 768 y 375 px para que el rostro quede visible
+- Nuevo hero a pedido de la artista: `upscalemedia-transformed.png` (3344×1882, rostro
+  centrado) → `andrea-media-068`; verificado en 1440, 768 y 375 px para que el rostro
+  quede visible

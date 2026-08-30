@@ -35,7 +35,14 @@ export function Gallery() {
   useEffect(() => {
     if (!isOpen) return;
 
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousDocumentOverflow = document.documentElement.style.overflow;
+    const preventScroll = (event: Event) => event.preventDefault();
     document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+    window.addEventListener("wheel", preventScroll, { passive: false });
+    window.addEventListener("touchmove", preventScroll, { passive: false });
+    window.dispatchEvent(new CustomEvent("modal-change", { detail: { open: true } }));
     closeRef.current?.focus();
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") setSelected(null);
@@ -45,7 +52,11 @@ export function Gallery() {
     window.addEventListener("keydown", onKeyDown);
 
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousBodyOverflow;
+      document.documentElement.style.overflow = previousDocumentOverflow;
+      window.removeEventListener("wheel", preventScroll);
+      window.removeEventListener("touchmove", preventScroll);
+      window.dispatchEvent(new CustomEvent("modal-change", { detail: { open: false } }));
       window.removeEventListener("keydown", onKeyDown);
       triggerRef.current?.focus();
     };

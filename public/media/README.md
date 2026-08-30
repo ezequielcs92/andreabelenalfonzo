@@ -5,9 +5,10 @@ Las imágenes y posters se alojan en **Cloudflare Images**, los videos cortos en
 tabla identifican los originales que debe entregar la artista.
 
 El 2026-08-29 se optimizaron y subieron las 64 imágenes actuales a Cloudflare Images.
-Usan IDs determinísticos desde `andrea-media-001` hasta `andrea-media-064` más tres
+Usan IDs determinísticos desde `andrea-media-001` hasta `andrea-media-064` más cuatro
 reemplazos a pedido de la artista: `andrea-media-065` (Cintas gota), `andrea-media-066`
-(Suspensión capilar) y `andrea-media-067` (hero); cada imagen conserva el nombre original
+(Suspensión capilar), `andrea-media-067` (hero anterior) y `andrea-media-068` (hero vigente);
+cada imagen conserva el nombre original
 en su metadata y Fotos muestra la biblioteca completa. La aplicación entrega la variante
 pública `high` (hasta 2560 px) para evitar ampliaciones de la variante `public` de 1366×768.
 
