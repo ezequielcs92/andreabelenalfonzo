@@ -388,9 +388,9 @@ elige verlos.
 
 | Título ES | Título EN | YouTube |
 | --- | --- | --- |
-| Fuerza capilar · Cirque XXI 360° | Hair suspension · Cirque XXI 360° | `https://youtu.be/Gr11QsgZSik` |
 | Suspensión capilar · Ensayo TIGROU | Hair suspension · TIGROU rehearsal | `https://youtu.be/C6zeKMumMqs` |
 | Fuerza capilar · Acto completo | Hair suspension · Full act | `https://youtu.be/Sscbh5wW_HA` |
+| Lira aérea · Acto completo | Aerial lyra · Full act | `https://youtu.be/4xjngMDb6MA` |
 | Fuerza capilar · Temporada de verano | Hair suspension · Summer season | `https://youtu.be/AT2RcZ4PLVk` |
 
 ---
@@ -477,4 +477,5 @@ Resueltos:
   (2026-08-28)
 - Edén — Lo salvaje de la naturaleza incorporado a la experiencia publicada (2026-08-28)
 - 64 imágenes y 22 videos optimizados e integrados mediante Cloudflare Images y Stream;
-  cuatro números completos incorporados desde YouTube (2026-08-29)
+  números completos incorporados desde YouTube (2026-08-29; el video de Cirque XXI 360° se
+  retiró a pedido de la artista el mismo día)

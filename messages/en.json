@@ -165,9 +165,9 @@
     "play": "Watch full act",
     "close": "Close video",
     "items": {
-      "cirque": {"title": "Hair suspension · Cirque XXI 360°"},
       "tigrou": {"title": "Hair suspension · TIGROU rehearsal"},
       "complete": {"title": "Hair suspension · Full act"},
+      "lyra": {"title": "Aerial lyra · Full act"},
       "summer": {"title": "Hair suspension · Summer season"}
     }
   },

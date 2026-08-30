@@ -4,8 +4,8 @@ export type FullAct = {
 };
 
 export const fullActs: FullAct[] = [
-  { id: "cirque", youtubeId: "Gr11QsgZSik" },
   { id: "tigrou", youtubeId: "C6zeKMumMqs" },
   { id: "complete", youtubeId: "Sscbh5wW_HA" },
+  { id: "lyra", youtubeId: "4xjngMDb6MA" },
   { id: "summer", youtubeId: "AT2RcZ4PLVk" },
 ];

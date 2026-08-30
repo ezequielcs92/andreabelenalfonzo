@@ -165,9 +165,9 @@
     "play": "Ver número completo",
     "close": "Cerrar video",
     "items": {
-      "cirque": {"title": "Fuerza capilar · Cirque XXI 360°"},
       "tigrou": {"title": "Suspensión capilar · Ensayo TIGROU"},
       "complete": {"title": "Fuerza capilar · Acto completo"},
+      "lyra": {"title": "Lira aérea · Acto completo"},
       "summer": {"title": "Fuerza capilar · Temporada de verano"}
     }
   },
