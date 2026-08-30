@@ -479,3 +479,7 @@ Resueltos:
 - 64 imágenes y 22 videos optimizados e integrados mediante Cloudflare Images y Stream;
   números completos incorporados desde YouTube (2026-08-29; el video de Cirque XXI 360° se
   retiró a pedido de la artista el mismo día)
+- Reemplazos de disciplinas a pedido de la artista: Cintas gota → `andrea-media-065`
+  (`Cintas gota .jpg`) y Suspensión capilar → `andrea-media-066` (`PSX_20260722_164459.jpeg`)
+- Nuevo hero a pedido de la artista: `hero.png` (1672×941, rostro centrado) →
+  `andrea-media-067`; verificado en 1440, 768 y 375 px para que el rostro quede visible

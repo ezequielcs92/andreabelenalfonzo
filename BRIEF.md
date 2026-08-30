@@ -510,9 +510,10 @@ Rich Results Test antes de dar por cerrada la tarea.
 ## 9. Entrega de material
 
 Andrea entregó 64 imágenes y 22 videos el 2026-08-29. Las imágenes optimizadas están en
-Cloudflare Images con IDs `andrea-media-001` a `andrea-media-064`; el hero usa
-`andrea-media-014`. Los 22 videos están en Stream y sus UIDs se registran en
-`src/data/videos.ts`:
+Cloudflare Images con IDs `andrea-media-001` a `andrea-media-064` más tres reemplazos a
+pedido de la artista: `andrea-media-065` (Cintas gota), `andrea-media-066` (Suspensión
+capilar) y `andrea-media-067` (hero, `hero.png` de 1672×941 con el rostro centrado).
+Los 22 videos están en Stream y sus UIDs se registran en `src/data/videos.ts`:
 
 | Archivo | Uso | Proporción sugerida |
 | --- | --- | --- |

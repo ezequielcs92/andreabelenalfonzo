@@ -22,7 +22,7 @@ export function getStreamIframe(uid: string) {
 }
 
 export const media = {
-  hero: getCloudflareImage("andrea-media-014"),
+  hero: getCloudflareImage("andrea-media-067"),
   portrait: getCloudflareImage("55a59cda-ac64-4b24-e934-794931066300"),
 } as const;
 
