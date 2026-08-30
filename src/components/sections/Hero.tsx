@@ -26,7 +26,7 @@ export function Hero() {
           fill
           quality={90}
           preload
-          sizes="100vw"
+          sizes="(max-width: 600px) 210vh, 100vw"
           className="hero-image"
         />
       </motion.div>
