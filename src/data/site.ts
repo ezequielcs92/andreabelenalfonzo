@@ -10,7 +10,7 @@ const CLOUDFLARE_STREAM_URL =
   "https://customer-mjd8o63x3qakbzze.cloudflarestream.com";
 
 export function getCloudflareImage(id: string) {
-  return `${CLOUDFLARE_IMAGES_URL}/${id}/public`;
+  return `${CLOUDFLARE_IMAGES_URL}/${id}/high`;
 }
 
 export function getStreamThumbnail(uid: string) {

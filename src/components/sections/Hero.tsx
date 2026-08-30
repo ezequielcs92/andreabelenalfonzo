@@ -24,6 +24,7 @@ export function Hero() {
           src={media.hero}
           alt=""
           fill
+          quality={90}
           preload
           sizes="100vw"
           className="hero-image"

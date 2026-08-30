@@ -4,6 +4,7 @@ const withNextIntl = createNextIntlPlugin();
 
 export default withNextIntl({
   images: {
+    qualities: [75, 90],
     remotePatterns: [
       {
         protocol: "https",

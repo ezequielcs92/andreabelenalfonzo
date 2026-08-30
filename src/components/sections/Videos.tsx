@@ -83,6 +83,7 @@ export function Videos() {
                 src={getStreamThumbnail(video.uid)}
                 alt=""
                 fill
+                quality={90}
                 sizes="(max-width: 600px) 50vw, (max-width: 900px) 33vw, 25vw"
               />
               <span className="video-card-overlay" />

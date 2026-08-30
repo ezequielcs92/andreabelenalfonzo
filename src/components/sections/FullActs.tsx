@@ -65,6 +65,7 @@ export function FullActs() {
                   src={`https://i.ytimg.com/vi/${act.youtubeId}/hqdefault.jpg`}
                   alt=""
                   fill
+                  quality={90}
                   sizes="(max-width: 700px) 100vw, 50vw"
                 />
                 <span className="full-act-overlay" />

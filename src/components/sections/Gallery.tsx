@@ -76,6 +76,7 @@ export function Gallery() {
                   src={item.src}
                   alt={t("imageAlt", { number: Number(item.id) })}
                   fill
+                  quality={90}
                   sizes="(max-width: 600px) 50vw, (max-width: 900px) 33vw, 25vw"
                 />
               </motion.div>
@@ -105,6 +106,7 @@ export function Gallery() {
                 src={selectedItem.src}
                 alt={t("imageAlt", { number: Number(selectedItem.id) })}
                 fill
+                quality={90}
                 sizes="90vw"
               />
             </motion.div>

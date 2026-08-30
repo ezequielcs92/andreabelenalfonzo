@@ -16,6 +16,7 @@ export async function About() {
             src={media.portrait}
             alt={t("portraitAlt")}
             fill
+            quality={90}
             sizes="(max-width: 900px) 100vw, 42vw"
             className="media-image"
           />

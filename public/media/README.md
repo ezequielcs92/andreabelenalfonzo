@@ -8,7 +8,8 @@ El 2026-08-29 se optimizaron y subieron las 64 imágenes actuales a Cloudflare I
 Usan IDs determinísticos desde `andrea-media-001` hasta `andrea-media-064` más tres
 reemplazos a pedido de la artista: `andrea-media-065` (Cintas gota), `andrea-media-066`
 (Suspensión capilar) y `andrea-media-067` (hero); cada imagen conserva el nombre original
-en su metadata y Fotos muestra la biblioteca completa.
+en su metadata y Fotos muestra la biblioteca completa. La aplicación entrega la variante
+pública `high` (hasta 2560 px) para evitar ampliaciones de la variante `public` de 1366×768.
 
 Los 22 videos entregados se normalizaron a MP4 H.264/AAC y se subieron a Cloudflare Stream.
 Sus UIDs públicos están en `src/data/videos.ts`; Videos muestra todos los clips y monta el
