@@ -36,10 +36,8 @@
     "portrait": "portrait.jpg",
     "portraitAlt": "Professional portrait of Andrea Alfonzo",
     "paragraphs": [
-      "I am a professional circus artist, aerialist and dancer, passionate about movement, performance and artistic expression. My work combines discipline, strength, elegance and sensitivity, creating performances that connect with the audience through emotion and stage presence.",
-      "I consider myself a committed, adaptable and dedicated artist, with a constant desire to keep learning and to take on new challenges. My training in dance and circus has allowed me to develop versatility, stage presence and a deep connection with movement, music and performance.",
-      "Through my performances I seek to move, inspire and captivate the audience, creating memorable experiences and bringing my own personality, energy and passion to every stage.",
-      "My goal is to keep growing professionally and to be part of companies, shows, productions and artistic projects both in Argentina and abroad, contributing professionalism, creativity and commitment in every opportunity."
+      "I am a professional circus artist, aerialist and dancer, passionate about movement, performance and bodily expression. My work combines flexibility, strength, elegance and delicacy, seeking to create performances that captivate the audience.",
+      "I consider myself a committed, versatile and dedicated artist, with a constant desire to keep learning, growing and gaining new experiences, developing professionally as part of companies, shows and artistic projects both in Argentina and abroad, bringing creativity, professionalism and commitment to every opportunity."
     ]
   },
   "disciplines": {
@@ -47,21 +45,21 @@
     "title": "Aerial disciplines",
     "hairHanging": {
       "name": "Hair hanging",
-      "description": "An aerial act held entirely by the hair, where strength turns into stillness."
+      "description": "A combination of fast spins and speed. Suspended from her hair, she flies with delicacy and serenity, weaving contortion and flexibility shapes into a blend of fluid dance."
     },
     "aerialLyra": {
       "name": "Aerial lyra",
-      "description": "Shapes and transitions on the hoop, between dance and acrobatics."
+      "description": "A fusion of dance, flexibility and strength on an aerial hoop, metres above the ground, where elegance, passion and delicacy turn into movement."
     },
     "aerialDrop": {
       "name": "Aerial drop straps",
-      "description": "High-impact drops and spins that play with speed and vertigo."
+      "description": "A sensual, provocative aerial act combining dance and acrobatics. A bold, sophisticated proposal, ideal for night shows, cabaret and events looking for an intense, captivating staging."
     },
     "aerialSilks": {
       "name": "Aerial silks",
-      "description": "Climbs, wraps and drops that draw the air with the fabric."
+      "description": "An act of character and intensity combining dynamic climbs, shapes and wraps at height, drops and risk moves. A proposal of strength, speed and control that keeps the audience on edge."
     },
-    "other": "Versatility and adaptation to different aerial techniques and apparatus according to the needs of each show. Complementary training in classical ballet, jazz, contemporary, urban styles, contortion, acrobatics and pole sport."
+    "other": "Versatility and adaptation to different aerial techniques and apparatus, according to the needs and characteristics of each show."
   },
   "experience": {
     "eyebrow": "Career",

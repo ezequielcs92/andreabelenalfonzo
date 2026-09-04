@@ -36,10 +36,8 @@
     "portrait": "portrait.jpg",
     "portraitAlt": "Retrato profesional de Andrea Alfonzo",
     "paragraphs": [
-      "Soy artista circense profesional, aerialista y bailarina, apasionada por el movimiento, la interpretación y la expresión artística. Mi trabajo combina disciplina, fuerza, elegancia y sensibilidad, buscando crear presentaciones que conecten con el público a través de la emoción y la expresión escénica.",
-      "Me considero una artista comprometida, adaptable y dedicada, con un constante deseo de seguir aprendiendo y afrontar nuevos desafíos. Mi formación en danza y circo me ha permitido desarrollar versatilidad, presencia escénica y una profunda conexión con el movimiento, la música y la interpretación.",
-      "A través de mis presentaciones busco emocionar, inspirar y cautivar al público, creando experiencias memorables y transmitiendo mi propia personalidad, energía y pasión en cada escenario.",
-      "Mi objetivo es continuar creciendo profesionalmente y formar parte de compañías, espectáculos, producciones y proyectos artísticos nacionales e internacionales, aportando profesionalismo, creatividad y compromiso en cada oportunidad."
+      "Soy artista circense profesional, aerialista y bailarina, apasionada por el movimiento, la interpretación y la expresión corporal. Mi trabajo combina flexibilidad, fuerza, elegancia y delicadeza, buscando crear presentaciones que cautiven al público.",
+      "Me considero una artista comprometida, versátil y dedicada, con un constante deseo de seguir aprendiendo, creciendo y sumando nuevas experiencias, desarrollándome profesionalmente y formando parte de compañías, espectáculos y proyectos artísticos nacionales e internacionales, aportando creatividad, profesionalismo y compromiso en cada oportunidad."
     ]
   },
   "disciplines": {
@@ -47,21 +45,21 @@
     "title": "Disciplinas aéreas",
     "hairHanging": {
       "name": "Suspensión capilar",
-      "description": "Número de altura sostenido desde el cabello, donde la fuerza se vuelve calma."
+      "description": "Combinación de giros rápidos y velocidad. Suspendida desde el cabello, vuelos con delicadeza y serenidad, enlazando figuras de contorsión y flexibilidad con una mezcla de danza fluida."
     },
     "aerialLyra": {
       "name": "Lira aérea",
-      "description": "Figuras y transiciones sobre el aro, entre la danza y la acrobacia."
+      "description": "Una fusión de danza, flexibilidad y fuerza sobre un aro aéreo, a metros de altura, donde la elegancia, la pasión y la delicadeza se transforman en movimiento."
     },
     "aerialDrop": {
       "name": "Cintas gota",
-      "description": "Caídas y giros de alto impacto que juegan con la velocidad y el vértigo."
+      "description": "Un acto aéreo, sensual y provocador, que combina danza y acrobacia. Una propuesta atrevida y sofisticada, ideal para shows nocturnos, cabaret y eventos que buscan una puesta en escena intensa y cautivadora."
     },
     "aerialSilks": {
       "name": "Tela aérea",
-      "description": "Trepadas, envolturas y caídas que dibujan el aire con la tela."
+      "description": "Acto de carácter e intensidad que combina trepadas dinámicas, figuras y enrosques en altura, descensos y movimientos de riesgo. Una propuesta de fuerza, velocidad y control que mantiene al público expectante."
     },
-    "other": "Versatilidad y adaptación a diferentes técnicas y elementos aéreos según las necesidades del espectáculo. Formación complementaria en danza clásica, jazz, contemporáneo, ritmos urbanos, contorsión, acrobacia y pole sport."
+    "other": "Versatilidad y adaptación a diferentes técnicas y elementos aéreos, según las necesidades y características del espectáculo."
   },
   "experience": {
     "eyebrow": "Trayectoria",

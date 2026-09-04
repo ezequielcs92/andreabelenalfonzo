@@ -49,43 +49,28 @@ ambos idiomas asentados acá antes de llevarlos a `messages/*.json`.
 **ES**
 
 > Soy artista circense profesional, aerialista y bailarina, apasionada por el
-> movimiento, la interpretación y la expresión artística. Mi trabajo combina
-> disciplina, fuerza, elegancia y sensibilidad, buscando crear presentaciones
-> que conecten con el público a través de la emoción y la expresión escénica.
+> movimiento, la interpretación y la expresión corporal. Mi trabajo combina
+> flexibilidad, fuerza, elegancia y delicadeza, buscando crear presentaciones
+> que cautiven al público.
 >
-> Me considero una artista comprometida, adaptable y dedicada, con un constante
-> deseo de seguir aprendiendo y afrontar nuevos desafíos. Mi formación en danza
-> y circo me ha permitido desarrollar versatilidad, presencia escénica y una
-> profunda conexión con el movimiento, la música y la interpretación.
->
-> A través de mis presentaciones busco emocionar, inspirar y cautivar al
-> público, creando experiencias memorables y transmitiendo mi propia
-> personalidad, energía y pasión en cada escenario.
->
-> Mi objetivo es continuar creciendo profesionalmente y formar parte de
-> compañías, espectáculos, producciones y proyectos artísticos nacionales e
-> internacionales, aportando profesionalismo, creatividad y compromiso en cada
-> oportunidad.
+> Me considero una artista comprometida, versátil y dedicada, con un constante
+> deseo de seguir aprendiendo, creciendo y sumando nuevas experiencias,
+> desarrollándome profesionalmente y formando parte de compañías, espectáculos
+> y proyectos artísticos nacionales e internacionales, aportando creatividad,
+> profesionalismo y compromiso en cada oportunidad.
 
 **EN**
 
 > I am a professional circus artist, aerialist and dancer, passionate about
-> movement, performance and artistic expression. My work combines discipline,
-> strength, elegance and sensitivity, creating performances that connect with
-> the audience through emotion and stage presence.
+> movement, performance and bodily expression. My work combines flexibility,
+> strength, elegance and delicacy, seeking to create performances that
+> captivate the audience.
 >
-> I consider myself a committed, adaptable and dedicated artist, with a constant
-> desire to keep learning and to take on new challenges. My training in dance
-> and circus has allowed me to develop versatility, stage presence and a deep
-> connection with movement, music and performance.
->
-> Through my performances I seek to move, inspire and captivate the audience,
-> creating memorable experiences and bringing my own personality, energy and
-> passion to every stage.
->
-> My goal is to keep growing professionally and to be part of companies, shows,
-> productions and artistic projects both in Argentina and abroad, contributing
-> professionalism, creativity and commitment in every opportunity.
+> I consider myself a committed, versatile and dedicated artist, with a
+> constant desire to keep learning, growing and gaining new experiences,
+> developing professionally as part of companies, shows and artistic projects
+> both in Argentina and abroad, bringing creativity, professionalism and
+> commitment to every opportunity.
 
 ---
 
@@ -103,26 +88,24 @@ ambos idiomas asentados acá antes de llevarlos a `messages/*.json`.
 Descripciones cortas para las cards (una línea cada una, escritas para este sitio):
 
 - **Suspensión capilar / Hair hanging**
-  - ES: Número de altura sostenido desde el cabello, donde la fuerza se vuelve calma.
-  - EN: An aerial act held entirely by the hair, where strength turns into stillness.
+  - ES: Combinación de giros rápidos y velocidad. Suspendida desde el cabello, vuelos con delicadeza y serenidad, enlazando figuras de contorsión y flexibilidad con una mezcla de danza fluida.
+  - EN: A combination of fast spins and speed. Suspended from her hair, she flies with delicacy and serenity, weaving contortion and flexibility shapes into a blend of fluid dance.
 - **Lira aérea / Aerial lyra**
-  - ES: Figuras y transiciones sobre el aro, entre la danza y la acrobacia.
-  - EN: Shapes and transitions on the hoop, between dance and acrobatics.
+  - ES: Una fusión de danza, flexibilidad y fuerza sobre un aro aéreo, a metros de altura, donde la elegancia, la pasión y la delicadeza se transforman en movimiento.
+  - EN: A fusion of dance, flexibility and strength on an aerial hoop, metres above the ground, where elegance, passion and delicacy turn into movement.
 - **Cintas gota / Aerial drop straps**
-  - ES: Caídas y giros de alto impacto que juegan con la velocidad y el vértigo.
-  - EN: High-impact drops and spins that play with speed and vertigo.
+  - ES: Un acto aéreo, sensual y provocador, que combina danza y acrobacia. Una propuesta atrevida y sofisticada, ideal para shows nocturnos, cabaret y eventos que buscan una puesta en escena intensa y cautivadora.
+  - EN: A sensual, provocative aerial act combining dance and acrobatics. A bold, sophisticated proposal, ideal for night shows, cabaret and events looking for an intense, captivating staging.
 - **Tela aérea / Aerial silks**
-  - ES: Trepadas, envolturas y caídas que dibujan el aire con la tela.
-  - EN: Climbs, wraps and drops that draw the air with the fabric.
+  - ES: Acto de carácter e intensidad que combina trepadas dinámicas, figuras y enrosques en altura, descensos y movimientos de riesgo. Una propuesta de fuerza, velocidad y control que mantiene al público expectante.
+  - EN: An act of character and intensity combining dynamic climbs, shapes and wraps at height, drops and risk moves. A proposal of strength, speed and control that keeps the audience on edge.
 
 ### Otras disciplinas
 
-- ES: Versatilidad y adaptación a diferentes técnicas y elementos aéreos según las
-  necesidades del espectáculo. Formación complementaria en danza clásica, jazz,
-  contemporáneo, ritmos urbanos, contorsión, acrobacia y pole sport.
-- EN: Versatility and adaptation to different aerial techniques and apparatus according
-  to the needs of each show. Complementary training in classical ballet, jazz,
-  contemporary, urban styles, contortion, acrobatics and pole sport.
+- ES: Versatilidad y adaptación a diferentes técnicas y elementos aéreos, según las
+  necesidades y características del espectáculo.
+- EN: Versatility and adaptation to different aerial techniques and apparatus, according
+  to the needs and characteristics of each show.
 
 ---
 
