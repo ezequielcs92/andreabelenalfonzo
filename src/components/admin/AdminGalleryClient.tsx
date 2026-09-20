@@ -217,8 +217,7 @@ export function AdminGalleryClient({
         if (fromIndex < 0 || toIndex < 0) return current;
         const next = [...current];
         next.splice(fromIndex, 1);
-        const adjustedToIndex = fromIndex < toIndex ? toIndex - 1 : toIndex;
-        next.splice(adjustedToIndex, 0, draggedId);
+        next.splice(toIndex, 0, draggedId);
         return next;
       });
 
@@ -500,6 +499,7 @@ function GalleryGrid({
   onMove,
 }: GalleryGridProps) {
   const pointerDragId = useRef<string | null>(null);
+  const blockNativeDrag = useRef(false);
 
   const getPointerTargetId = (clientX: number, clientY: number) => {
     for (const element of document.elementsFromPoint(clientX, clientY)) {
@@ -517,7 +517,48 @@ function GalleryGrid({
           <li
             key={id}
             data-gallery-id={id}
+            draggable={isPublished && !disabled}
             className={`admin-card ${dropTargetId === id ? "drag-over" : ""} ${draggingId === id ? "is-dragging" : ""} ${isHidden ? "admin-card-hidden" : ""}`}
+            onPointerDownCapture={(event) => {
+              blockNativeDrag.current = Boolean(
+                (event.target as HTMLElement).closest(".admin-card-actions"),
+              );
+            }}
+            onPointerUpCapture={() => {
+              blockNativeDrag.current = false;
+            }}
+            onPointerCancelCapture={() => {
+              blockNativeDrag.current = false;
+            }}
+            onDragStart={(event) => {
+              if (
+                !isPublished ||
+                disabled ||
+                pointerDragId.current !== null ||
+                blockNativeDrag.current
+              ) {
+                event.preventDefault();
+                return;
+              }
+              event.dataTransfer.setData("text/plain", id);
+              event.dataTransfer.effectAllowed = "move";
+              onDragStart(id);
+            }}
+            onDragOver={(event) => {
+              if (!isPublished || !draggingId) return;
+              event.preventDefault();
+              event.dataTransfer.dropEffect = "move";
+              onDragOver(draggingId, id);
+            }}
+            onDrop={(event) => {
+              event.preventDefault();
+              const draggedId = event.dataTransfer.getData("text/plain") || draggingId;
+              if (draggedId) onDrop(draggedId, id);
+            }}
+            onDragEnd={() => {
+              blockNativeDrag.current = false;
+              onDragEnd();
+            }}
           >
             {isPublished && (
               <span

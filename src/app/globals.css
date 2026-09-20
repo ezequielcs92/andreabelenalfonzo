@@ -349,6 +349,8 @@ body,
 .admin-grid { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; padding: 0; margin: 0; }
 .admin-card { position: relative; display: flex; flex-direction: column; aspect-ratio: 4 / 5; background: var(--color-blanco); border: 1px solid var(--color-rosa); border-radius: .5rem; overflow: hidden; transition: border-color .2s ease, box-shadow .2s ease, transform .15s ease; }
 .admin-card:hover { border-color: var(--color-dorado); box-shadow: 0 8px 24px color-mix(in srgb, var(--color-tinta) 10%, transparent); }
+.admin-card[draggable="true"] { cursor: grab; }
+.admin-card[draggable="true"]:active { cursor: grabbing; }
 .admin-card.drag-over { border-color: var(--color-dorado); background: var(--color-dorado-claro); }
 .admin-card.is-dragging { opacity: .55; }
 .admin-card-hidden { opacity: .7; }
