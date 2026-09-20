@@ -188,29 +188,23 @@ export function AdminGalleryClient({
     setActiveTab((current) => (current === "bin" ? "published" : current));
   }, []);
 
-  const handleDragStart = useCallback(
-    (event: React.DragEvent<HTMLElement>, id: string) => {
-      setDraggingId(id);
-      event.dataTransfer.setData("text/plain", id);
-      event.dataTransfer.effectAllowed = "move";
-    },
-    [],
-  );
+  const handleDragStart = useCallback((id: string) => {
+    setDraggingId(id);
+  }, []);
 
   const handleDragOver = useCallback(
-    (event: React.DragEvent<HTMLLIElement>, targetId: string) => {
-      event.preventDefault();
-      if (draggingId && draggingId !== targetId && activeTab === "published") {
-        setDropTargetId(targetId);
-      }
+    (draggedId: string, targetId: string | null) => {
+      setDropTargetId(
+        activeTab === "published" && targetId && draggedId !== targetId
+          ? targetId
+          : null,
+      );
     },
-    [draggingId, activeTab],
+    [activeTab],
   );
 
   const handleDrop = useCallback(
-    (event: React.DragEvent<HTMLLIElement>, targetId: string) => {
-      event.preventDefault();
-      const draggedId = event.dataTransfer.getData("text/plain");
+    (draggedId: string, targetId: string) => {
       if (!draggedId || draggedId === targetId || activeTab !== "published") {
         setDraggingId(null);
         setDropTargetId(null);
@@ -479,9 +473,9 @@ type GalleryGridProps = {
   disabled: boolean;
   draggingId: string | null;
   dropTargetId: string | null;
-  onDragStart: (event: React.DragEvent<HTMLElement>, id: string) => void;
-  onDragOver: (event: React.DragEvent<HTMLLIElement>, id: string) => void;
-  onDrop: (event: React.DragEvent<HTMLLIElement>, id: string) => void;
+  onDragStart: (id: string) => void;
+  onDragOver: (draggedId: string, targetId: string | null) => void;
+  onDrop: (draggedId: string, targetId: string) => void;
   onDragEnd: () => void;
   onOpenModal: (id: string, trigger: HTMLButtonElement | null) => void;
   onHide: (id: string) => void;
@@ -505,6 +499,16 @@ function GalleryGrid({
   onRestore,
   onMove,
 }: GalleryGridProps) {
+  const pointerDragId = useRef<string | null>(null);
+
+  const getPointerTargetId = (clientX: number, clientY: number) => {
+    for (const element of document.elementsFromPoint(clientX, clientY)) {
+      const card = element.closest<HTMLElement>("[data-gallery-id]");
+      if (card?.dataset.galleryId) return card.dataset.galleryId;
+    }
+    return null;
+  };
+
   return (
     <ul className="admin-grid" role="list" aria-label={isPublished ? messages.tabPublished : messages.tabBin}>
       {ids.map((id, index) => {
@@ -512,20 +516,64 @@ function GalleryGrid({
         return (
           <li
             key={id}
+            data-gallery-id={id}
             className={`admin-card ${dropTargetId === id ? "drag-over" : ""} ${draggingId === id ? "is-dragging" : ""} ${isHidden ? "admin-card-hidden" : ""}`}
-            onDragOver={(event) => onDragOver(event, id)}
-            onDrop={(event) => onDrop(event, id)}
           >
             {isPublished && (
               <span
                 className="admin-drag-handle"
-                draggable={!disabled}
                 aria-hidden="true"
                 title={`${messages.dragHandle} ${id}`}
-                onDragStart={(event) => {
-                  if (!disabled) onDragStart(event, id);
+                onPointerDown={(event) => {
+                  if (
+                    disabled ||
+                    pointerDragId.current !== null ||
+                    (event.pointerType === "mouse" && event.button !== 0)
+                  ) return;
+                  event.preventDefault();
+                  pointerDragId.current = id;
+                  event.currentTarget.setPointerCapture(event.pointerId);
+                  onDragStart(id);
                 }}
-                onDragEnd={onDragEnd}
+                onPointerMove={(event) => {
+                  if (pointerDragId.current !== id) return;
+
+                  const targetId = getPointerTargetId(event.clientX, event.clientY);
+                  onDragOver(id, targetId);
+
+                  const edgeSize = 72;
+                  if (event.clientY < edgeSize) {
+                    window.scrollBy({ top: -12 });
+                  } else if (event.clientY > window.innerHeight - edgeSize) {
+                    window.scrollBy({ top: 12 });
+                  }
+                }}
+                onPointerUp={(event) => {
+                  if (pointerDragId.current !== id) return;
+                  const targetId = getPointerTargetId(event.clientX, event.clientY);
+                  pointerDragId.current = null;
+                  if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+                    event.currentTarget.releasePointerCapture(event.pointerId);
+                  }
+                  if (targetId) {
+                    onDrop(id, targetId);
+                  } else {
+                    onDragEnd();
+                  }
+                }}
+                onPointerCancel={(event) => {
+                  if (pointerDragId.current !== id) return;
+                  pointerDragId.current = null;
+                  if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+                    event.currentTarget.releasePointerCapture(event.pointerId);
+                  }
+                  onDragEnd();
+                }}
+                onLostPointerCapture={() => {
+                  if (pointerDragId.current !== id) return;
+                  pointerDragId.current = null;
+                  onDragEnd();
+                }}
               >
                 <GripVertical aria-hidden="true" size={18} />
               </span>

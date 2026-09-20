@@ -354,7 +354,7 @@ body,
 .admin-card-hidden { opacity: .7; }
 .admin-card-hidden .admin-card-media img { filter: grayscale(70%); }
 
-.admin-drag-handle { position: absolute; z-index: 5; top: .5rem; left: .5rem; display: grid; width: 32px; height: 32px; place-items: center; border: 0; border-radius: .3rem; background: color-mix(in srgb, var(--color-tinta) 70%, transparent); color: var(--color-blanco); cursor: grab; opacity: 0; transition: opacity .2s ease; }
+.admin-drag-handle { position: absolute; z-index: 5; top: .5rem; left: .5rem; display: grid; width: 32px; height: 32px; place-items: center; border: 0; border-radius: .3rem; background: color-mix(in srgb, var(--color-tinta) 70%, transparent); color: var(--color-blanco); cursor: grab; opacity: 0; touch-action: none; user-select: none; transition: opacity .2s ease; }
 .admin-card:hover .admin-drag-handle, .admin-card:focus-within .admin-drag-handle { opacity: 1; }
 .admin-drag-handle:active { cursor: grabbing; }
 
