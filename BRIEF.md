@@ -30,11 +30,12 @@ Tiene que lograr tres cosas al mismo tiempo:
 | Idiomas | Español (default) e inglés, en rutas separadas `/es` y `/en` |
 | Material visual | 64 imágenes en Cloudflare Images, 22 videos en Stream y 4 números completos en YouTube |
 | Infraestructura multimedia | Cloudflare Images para fotos, R2 para loops y Stream para videos largos |
-| Contacto | WhatsApp + email + Instagram. **Sin formulario, sin backend, sin secretos** |
+| Contacto | WhatsApp + email + Instagram. **Sin formulario ni backend de contacto**; el único secreto server-side pertenece al panel de galería |
 | Hosting | Vercel, dominio **andreabelenalfonzo.com** → siempre leído desde `NEXT_PUBLIC_SITE_URL` |
+| Administración | Panel de galería en el subdominio definido por `ADMIN_SITE_URL`, protegido por Cloudflare Access |
 | Repositorio | `https://github.com/ezequielcs92/andreabelenalfonzo.git` |
 | Animación | Cinematográfica y elegante. **No juguetona**: nada de confetti, cursores raros ni micro-juegos |
-| Fuera de alcance | Formulario, CMS, panel de administración, blog, descarga de CV en PDF |
+| Fuera de alcance | Formulario, CMS, blog, descarga de CV en PDF. El panel de administración de la galería es una excepción aprobada y documentada aparte |
 
 ---
 
@@ -58,8 +59,9 @@ Fijado para coincidir con los otros proyectos de `D:\Desarrollos` (`Locutora`,
 | Videos largos | Cloudflare Stream con reproducción adaptativa |
 | Deploy | Vercel |
 
-Sin Supabase, sin Resend, sin base de datos. El sitio es estático: todas las rutas deben
-poder prerenderizarse.
+Sin Supabase, sin Resend. La única base de datos es Cloudflare D1 para el estado del
+orden y visibilidad de la galería, accedida por REST con token server-only. El resto del
+sitio es estático: todas las rutas públicas deben poder prerenderizarse.
 
 ### Scaffolding
 
@@ -70,7 +72,7 @@ npx create-next-app@latest . --ts --app --tailwind --eslint --src-dir --no-impor
 Luego:
 
 ```bash
-npm i motion lenis next-intl lucide-react
+npm i motion lenis next-intl lucide-react jose
 ```
 
 ---

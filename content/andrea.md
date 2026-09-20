@@ -442,6 +442,51 @@ Mensaje pre-cargado de WhatsApp:
 | `contact.title` | Trabajemos juntos | Let's work together |
 | `contact.lead` | Disponible para espectáculos, producciones y giras internacionales. | Available for shows, productions and international tours. |
 | `footer.rights` | Andrea Belén Alfonzo · Todos los derechos reservados | Andrea Belén Alfonzo · All rights reserved |
+| `footer.backToTop` | Volver arriba | Back to top |
+
+### 11.1 Panel de galería
+
+Usado en `src/components/admin/AdminGalleryClient.tsx`.
+
+| Clave | ES | EN |
+| --- | --- | --- |
+| `admin.title` | Curador de galería | Gallery curator |
+| `admin.eyebrow` | Administración | Admin |
+| `admin.description` | Reordená las fotos visibles, ocultalas de la galería pública o restaurarlas. Los cambios se guardan de forma explícita. | Reorder visible photos, hide them from the public gallery, or restore them. Changes are saved explicitly. |
+| `admin.tabPublished` | Publicadas | Published |
+| `admin.tabBin` | Papelera | Bin |
+| `admin.save` | Guardar cambios | Save changes |
+| `admin.saving` | Guardando... | Saving... |
+| `admin.saved` | Cambios guardados | Changes saved |
+| `admin.saveError` | No se pudieron guardar los cambios | Could not save changes |
+| `admin.loadError` | No se pudo cargar el estado de la galería | Could not load the gallery state |
+| `admin.serviceUnavailable` | El panel no está disponible porque falta la configuración de D1 o Cloudflare Access. | The panel is unavailable because D1 or Cloudflare Access configuration is missing. |
+| `admin.unauthorized` | No tenés acceso a este panel. | You do not have access to this panel. |
+| `admin.unsavedChanges` | Cambios sin guardar | Unsaved changes |
+| `admin.noChanges` | Sin cambios | No changes |
+| `admin.dragHandle` | Arrastrar para reordenar | Drag to reorder |
+| `admin.moveBackward` | Mover atrás | Move back |
+| `admin.moveForward` | Mover adelante | Move forward |
+| `admin.moveUp` | Mover arriba | Move up |
+| `admin.moveDown` | Mover abajo | Move down |
+| `admin.hide` | Quitar de la galería | Remove from gallery |
+| `admin.restore` | Restaurar en la galería | Restore to gallery |
+| `admin.emptyBin` | La papelera está vacía. | The bin is empty. |
+| `admin.counterVisible` | {count} publicadas | {count} published |
+| `admin.counterHidden` | {count} en papelera | {count} in bin |
+| `admin.preview` | Ver galería pública | View public gallery |
+| `admin.openImage` | Ampliar imagen | Enlarge image |
+| `admin.closeModal` | Cerrar detalle | Close details |
+| `admin.previous` | Anterior | Previous |
+| `admin.next` | Siguiente | Next |
+| `admin.modalTitle` | Detalle de imagen | Image details |
+| `admin.modalNavigation` | Recorrer biblioteca | Browse library |
+| `admin.modalOrdering` | Orden de publicación | Publishing order |
+| `admin.modalPosition` | Posición {position} de {total} | Position {position} of {total} |
+| `admin.statusVisible` | Visible | Visible |
+| `admin.statusHidden` | En papelera | In bin |
+| `admin.imageAlt` | Andrea Alfonzo en escena, fotografía {number} | Andrea Alfonzo on stage, photograph {number} |
+| `admin.help` | Arrastrá las tarjetas para reordenar las publicadas. Hacé click en una imagen para verla en grande y gestionarla. | Drag cards to reorder published images. Click an image to enlarge it and manage it. |
 
 ---
 

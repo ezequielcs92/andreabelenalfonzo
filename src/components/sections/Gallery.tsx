@@ -6,7 +6,7 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { SectionHeading } from "@/components/layout/SectionHeading";
-import { galleryItems } from "@/data/gallery";
+import type { GalleryItem } from "@/data/gallery";
 
 function getTileVariant(index: number) {
   const position = index % 10;
@@ -16,20 +16,28 @@ function getTileVariant(index: number) {
   return "media-tile-square";
 }
 
-function getAdjacentItemId(current: string | null, direction: -1 | 1) {
-  const currentIndex = galleryItems.findIndex((item) => item.id === current);
+function getAdjacentItemId(
+  items: GalleryItem[],
+  current: string | null,
+  direction: -1 | 1,
+) {
+  const currentIndex = items.findIndex((item) => item.id === current);
   if (currentIndex < 0) return null;
-  return galleryItems[(currentIndex + direction + galleryItems.length) % galleryItems.length].id;
+  return items[(currentIndex + direction + items.length) % items.length].id;
 }
 
-export function Gallery() {
+type GalleryProps = {
+  items: GalleryItem[];
+};
+
+export function Gallery({ items }: GalleryProps) {
   const t = useTranslations("gallery");
   const reduce = useReducedMotion();
   const [selected, setSelected] = useState<string | null>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const triggerRef = useRef<HTMLButtonElement | null>(null);
-  const selectedItem = galleryItems.find((item) => item.id === selected);
-  const selectedIndex = galleryItems.findIndex((item) => item.id === selected);
+  const selectedItem = items.find((item) => item.id === selected);
+  const selectedIndex = items.findIndex((item) => item.id === selected);
   const isOpen = selected !== null;
 
   useEffect(() => {
@@ -46,8 +54,10 @@ export function Gallery() {
     closeRef.current?.focus();
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") setSelected(null);
-      if (event.key === "ArrowLeft") setSelected((current) => getAdjacentItemId(current, -1));
-      if (event.key === "ArrowRight") setSelected((current) => getAdjacentItemId(current, 1));
+      if (event.key === "ArrowLeft")
+        setSelected((current) => getAdjacentItemId(items, current, -1));
+      if (event.key === "ArrowRight")
+        setSelected((current) => getAdjacentItemId(items, current, 1));
     };
     window.addEventListener("keydown", onKeyDown);
 
@@ -60,7 +70,9 @@ export function Gallery() {
       window.removeEventListener("keydown", onKeyDown);
       triggerRef.current?.focus();
     };
-  }, [isOpen]);
+  }, [isOpen, items]);
+
+  if (items.length === 0) return null;
 
   return (
     <section id="photos" className="section gallery-section">
@@ -68,7 +80,7 @@ export function Gallery() {
         <SectionHeading eyebrow={t("eyebrow")} title={t("title")} />
         <p className="gallery-lead">{t("lead")}</p>
         <div className="gallery-grid">
-          {galleryItems.map((item, index) => (
+          {items.map((item, index) => (
             <button
               key={item.id}
               className={`gallery-item ${getTileVariant(index)}`}
@@ -125,7 +137,9 @@ export function Gallery() {
               className="carousel-control carousel-control-previous"
               type="button"
               aria-label={t("previous")}
-              onClick={() => setSelected((current) => getAdjacentItemId(current, -1))}
+              onClick={() =>
+                setSelected((current) => getAdjacentItemId(items, current, -1))
+              }
             >
               <ChevronLeft aria-hidden="true" />
             </button>
@@ -133,12 +147,14 @@ export function Gallery() {
               className="carousel-control carousel-control-next"
               type="button"
               aria-label={t("next")}
-              onClick={() => setSelected((current) => getAdjacentItemId(current, 1))}
+              onClick={() =>
+                setSelected((current) => getAdjacentItemId(items, current, 1))
+              }
             >
               <ChevronRight aria-hidden="true" />
             </button>
             <p className="carousel-counter" aria-live="polite">
-              {t("position", { current: selectedIndex + 1, total: galleryItems.length })}
+              {t("position", { current: selectedIndex + 1, total: items.length })}
             </p>
             <button
               className="modal-close"

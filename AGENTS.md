@@ -20,9 +20,13 @@ del proyecto. Los textos salen de [`content/andrea.md`](content/andrea.md).
 - **Cloudflare R2** para videos cortos en loop
 - **Cloudflare Stream** para reels y videos largos
 
-No hay base de datos, backend, formulario ni panel de administración. **No agregar
-Supabase, Resend ni ningún servicio con credenciales**: el contacto es WhatsApp, email e
-Instagram, y el sitio debe poder prerenderizarse entero.
+No hay formulario ni backend general. El sitio público debe poder prerenderizarse entero.
+Excepción aprobada: un panel servido desde el subdominio admin y protegido por Cloudflare Access para curar la
+galería, que persiste el orden y visibilidad de las 64 imágenes en Cloudflare D1 mediante
+REST y token server-only.
+
+**No agregar Supabase, Resend ni ningún servicio con credenciales** salvo la excepción D1
+ya documentada: el contacto sigue siendo WhatsApp, email e Instagram.
 
 Los identificadores públicos de Images, R2 y Stream pueden llegar al cliente, pero nunca
 guardar tokens de API, claves de acceso ni secretos de Cloudflare en el repositorio o el frontend.
