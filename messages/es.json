@@ -240,5 +240,9 @@
     "statusHidden": "En papelera",
     "imageAlt": "Andrea Alfonzo en escena, fotografía {number}",
     "help": "Arrastrá las tarjetas para reordenar las publicadas. Hacé click en una imagen para verla en grande y gestionarla."
+  },
+  "maintenance": {
+    "title": "Sitio en mantenimiento",
+    "body": "Estamos realizando tareas de mantenimiento. Volvé a intentar más tarde."
   }
 }

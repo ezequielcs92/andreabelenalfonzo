@@ -240,5 +240,9 @@
     "statusHidden": "In bin",
     "imageAlt": "Andrea Alfonzo on stage, photograph {number}",
     "help": "Drag cards to reorder published images. Click an image to enlarge it and manage it."
+  },
+  "maintenance": {
+    "title": "Site under maintenance",
+    "body": "We are carrying out maintenance work. Please check back later."
   }
 }

@@ -1,10 +1,18 @@
 import createMiddleware from "next-intl/middleware";
 import { type NextRequest, NextResponse } from "next/server";
 import { routing } from "./i18n/routing";
+import { MAINTENANCE_MODE, maintenanceResponse } from "./lib/maintenance";
 
 const intlMiddleware = createMiddleware(routing);
 
+// Paths that are served as-is, without locale routing or admin host handling.
+const passthroughPath = /^\/(?:api|trpc|_next|_vercel|opengraph-image|admin|.*\..*)/;
+
 export default function proxy(request: NextRequest) {
+  if (MAINTENANCE_MODE) return maintenanceResponse();
+
+  if (passthroughPath.test(request.nextUrl.pathname)) return NextResponse.next();
+
   const configuredAdminUrl = process.env.ADMIN_SITE_URL?.trim();
 
   if (configuredAdminUrl) {
@@ -31,6 +39,8 @@ export default function proxy(request: NextRequest) {
   return intlMiddleware(request);
 }
 
+// Broad on purpose so maintenance mode also covers the API, the admin panel,
+// the OG image and metadata files; passthroughPath narrows it back down.
 export const config = {
-  matcher: "/((?!api|trpc|_next|_vercel|opengraph-image|admin|.*\\..*).*)",
+  matcher: "/((?!_next|_vercel).*)",
 };
