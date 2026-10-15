@@ -69,7 +69,7 @@ Andrea entregó 64 imágenes y 22 videos el 2026-08-29. Las imágenes actuales e
 Cloudflare Images con IDs `andrea-media-001` a `andrea-media-064` más dos reemplazos de
 disciplinas (`andrea-media-065` y `andrea-media-066`); los videos están en
 Cloudflare Stream y sus UIDs viven en `src/data/videos.ts`. Fotos muestra las 64 imágenes,
-Videos muestra los 22 clips y Números completos contiene cuatro enlaces de YouTube. No usar
+Videos muestra los 22 clips y Números completos contiene tres enlaces de YouTube. No usar
 material de stock.
 
 ## Datos a no publicar

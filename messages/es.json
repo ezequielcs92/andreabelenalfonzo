@@ -165,8 +165,7 @@
     "items": {
       "tigrou": {"title": "Suspensión capilar · Ensayo TIGROU"},
       "complete": {"title": "Fuerza capilar · Acto completo"},
-      "lyra": {"title": "Lira aérea · Acto completo"},
-      "summer": {"title": "Fuerza capilar · Temporada de verano"}
+      "lyra": {"title": "Lira aérea · Acto completo"}
     }
   },
   "specs": {

@@ -374,7 +374,6 @@ elige verlos.
 | Suspensión capilar · Ensayo TIGROU | Hair suspension · TIGROU rehearsal | `https://youtu.be/C6zeKMumMqs` |
 | Fuerza capilar · Acto completo | Hair suspension · Full act | `https://youtu.be/Sscbh5wW_HA` |
 | Lira aérea · Acto completo | Aerial lyra · Full act | `https://youtu.be/4xjngMDb6MA` |
-| Fuerza capilar · Temporada de verano | Hair suspension · Summer season | `https://youtu.be/AT2RcZ4PLVk` |
 
 ---
 
