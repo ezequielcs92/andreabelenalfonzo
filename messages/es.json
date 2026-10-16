@@ -165,7 +165,8 @@
     "items": {
       "tigrou": {"title": "Suspensión capilar · Ensayo TIGROU"},
       "complete": {"title": "Fuerza capilar · Acto completo"},
-      "lyra": {"title": "Lira aérea · Acto completo"}
+      "lyra": {"title": "Lira aérea · Acto completo"},
+      "cirque360": {"title": "Fuerza capilar · Cirque XXI 360°"}
     }
   },
   "specs": {
