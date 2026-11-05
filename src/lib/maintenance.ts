@@ -5,7 +5,7 @@ import esMessages from "../../messages/es.json";
  * While true, every request is answered with a generic maintenance notice and
  * nothing from the site is served. Set to false and redeploy to bring it back.
  */
-export const MAINTENANCE_MODE = false;
+export const MAINTENANCE_MODE = true;
 
 const { title, body } = esMessages.maintenance;
 const en = enMessages.maintenance;
